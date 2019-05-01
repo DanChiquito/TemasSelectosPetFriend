@@ -6,13 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_height="50dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="192dp"
+        android:onClick="onClickRegistrarse"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="138dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="147dp"
+        android:layout_marginLeft="147dp"
+        android:layout_marginTop="171dp"
+        android:layout_marginEnd="206dp"
+        android:layout_marginRight="206dp"
+        android:layout_marginBottom="215dp"
+        android:background="@drawable/boton_registrar"
+        android:gravity="center_horizontal"
+        android:isScrollContainer="false"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625" />
+
 
 </android.support.constraint.ConstraintLayout>
