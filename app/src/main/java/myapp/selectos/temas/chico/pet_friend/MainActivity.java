@@ -1,6 +1,5 @@
 package myapp.selectos.temas.chico.pet_friend;
 
-import android.app.ActivityOptions;
 import android.content.Intent;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +10,6 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
-import java.security.PublicKey;
 
 public class MainActivity extends AppCompatActivity {
 
