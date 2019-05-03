@@ -13,11 +13,12 @@
         android:layout_marginStart="146dp"
         android:layout_marginEnd="177dp"
         android:layout_marginBottom="192dp"
+        android:background="@drawable/custom_button"
         android:onClick="onClickRegistrarse"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -30,7 +31,6 @@
         android:layout_marginEnd="206dp"
         android:layout_marginRight="206dp"
         android:layout_marginBottom="215dp"
-        android:background="@drawable/boton_registrar"
         android:gravity="center_horizontal"
         android:isScrollContainer="false"
         android:text="TextView"
