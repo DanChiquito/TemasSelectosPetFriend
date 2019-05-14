@@ -12,13 +12,26 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/txt_bienvenido"
-        android:textSize="30dp"
-        android:textColor="#ffffff"
+        android:textSize="40sp"
+        android:textColor="@color/colortxtviews"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"/>
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_correo"
+
+        android:layout_below="@id/txtBienvenido"
+        android:layout_marginTop="15dp"
+        android:layout_alignStart="@id/edtCorreo"
+        android:textColor="@color/colortxtviews"
+        android:textSize="25sp"
+        />
+
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edtCorreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/background_edittext"
@@ -30,7 +43,7 @@
 
         android:layout_below="@+id/txtBienvenido"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="50dp"/>
 
     <Button
         android:id="@+id/button"

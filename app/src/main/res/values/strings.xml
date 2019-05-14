@@ -6,7 +6,7 @@
     <string name="edt_correo">examplemail.@example.com</string>
     <string name="txt_bienvenido">¡Bienvenido!</string>
     <string name="txt_acercade">Acerca de</string>
-    <string name="txt_correo">Correo</string>
+    <string name="txt_correo">Correo Electronico</string>
     <string name="txt_password">Contraseña</string>
     <string name="edt_password">Contraseña</string>
     <string name="txt_concuenta">¿Ya tienes cuenta? Presiona aquí</string>
