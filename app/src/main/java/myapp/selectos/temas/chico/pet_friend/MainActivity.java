@@ -13,7 +13,6 @@ import android.view.animation.DecelerateInterpolator;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Transition transition;
     public static final long duracionTrans = 1000;
 
     @Override
@@ -23,17 +22,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickRegistrarse(View v){
-        IniciarTransición();
+        IniciarTransicion();
         Intent intent = new Intent(this, AcercaDe.class);
         startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
     }
 
     public void onClickAcercaCe(View v)
     {
-        IniciarTransición();
+        IniciarTransicion();
     }
 
-    public void IniciarTransición(){
+    public void IniciarTransicion(){
+        Transition transition;
         transition = new Slide(Gravity.START);
         transition.setDuration(duracionTrans);
         transition.setInterpolator(new DecelerateInterpolator());
