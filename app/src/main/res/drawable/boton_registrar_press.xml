@@ -5,26 +5,26 @@
         android:topLeftRadius="15dp"
         android:topRightRadius="15dp"
         android:bottomLeftRadius="15dp"
-        android:bottomRightRadius="15dp"></corners>
+        android:bottomRightRadius="15dp"/>
 
     <gradient
         android:startColor="#3f51b5"
         android:endColor="#5c6bc0"
-        android:angle="45"></gradient>
+        android:angle="45"/>
 
     <padding
         android:bottom="7dp"
         android:right="7dp"
         android:left="7dp"
-        android:top="7dp"></padding>
+        android:top="7dp"/>
 
     <size
         android:width="150dp"
-        android:height="50dp"></size>
+        android:height="50dp"/>
 
     <stroke
         android:dashGap="10dp"
-        android:dashWidth="12dp"></stroke>
+        android:dashWidth="12dp"/>
 
 
 
