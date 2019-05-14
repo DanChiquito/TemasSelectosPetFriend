@@ -12,13 +12,28 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/txt_bienvenido"
-        android:textSize="30dp"
-        android:textColor="#ffffff"
+        android:textSize="35sp"
+        android:textColor="@color/colortxtviews"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"/>
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/txtCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_correo"
+
+        android:textColor="@color/colortxtviews"
+        android:textSize="20sp"
+
+        android:layout_below="@id/txtBienvenido"
+        android:layout_marginTop="15dp"
+        android:layout_alignStart="@id/edtCorreo"
+
+        />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edtCorreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/background_edittext"
@@ -28,23 +43,90 @@
         android:inputType="textPersonName"
 
 
-        android:layout_below="@+id/txtBienvenido"
+        android:layout_below="@+id/txtCorreo"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/txtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_password"
+
+        android:textColor="@color/colortxtviews"
+        android:textSize="20sp"
+
+        android:layout_below="@id/edtCorreo"
+        android:layout_alignStart="@+id/edtCorreo"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/edt_password"
+        android:gravity="center"
+
+        android:background="@drawable/background_edittext"
+        android:layout_below="@+id/txtPassword"
+        android:layout_alignStart="@+id/txtPassword" />
+
+
+    <Button
+        android:id="@+id/btnIniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/btn_inisesion"
+
+        android:layout_below="@+id/edtPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
 
+    <TextView
+        android:id="@+id/txtNotienesCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_sin_cuenta"
+
+        android:textColor="@color/colortxtviews"
+        android:textSize="25sp"
+
+        android:layout_below="@+id/btnIniciarSesion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnRegistrar"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="70dp"
+
         android:background="@drawable/custom_button"
         android:onClick="onClickRegistrarse"
         android:text="@string/btn_Registrarse"
-        tools:text="@string/btn_Registrarse" />
 
+        android:layout_below="@id/txtNotienesCuenta"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
 
+    <TextView
+        android:id="@+id/txtQuienSoy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quienes_somos"
+
+        android:textColor="@color/colortxtviews"
+        android:textSize="20sp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+
+        android:onClick="onClickAcercaCe"
+        />
 
 
 </RelativeLayout>
