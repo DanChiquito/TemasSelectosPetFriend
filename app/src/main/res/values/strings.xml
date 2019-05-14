@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Pet-Friend</string>
+    <string name="acerca_de">Somos un grupo de estudiantes de la Facultad de Ingeniería dedicados en innovar. Esta app fue diseñada con el propósito de ayudar a esas personas con el cuidado de sus mascotas. Esperamos y sea de su agrado</string>
+    <string name="quienes_somos">¿Quienes somos?</string>
+    <string name="btn_Registrarse">Registrarse</string>
 </resources>
