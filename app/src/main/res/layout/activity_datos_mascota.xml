@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DatosMascota">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backGround1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="192dp"
+            android:layout_height="68dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="106dp"
+            android:layout_marginTop="580dp"
+            android:background="@drawable/boton_extraviado"
+            android:text="@string/txt_Extraviado"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imvMascota"
+            android:layout_width="254dp"
+            android:layout_height="245dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="83dp"
+            android:layout_marginTop="41dp"
+            app:srcCompat="@drawable/gato1" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imvMascota"
+            android:layout_alignTop="@+id/imvMascota"
+            android:layout_marginStart="197dp"
+            android:layout_marginTop="192dp"
+            android:background="@drawable/boton_editar"
+            app:srcCompat="@drawable/ic_editar" />
+
+        <TextView
+            android:id="@+id/txtv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imvMascota"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="57dp"
+            android:text="@string/txt_Nombre"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtv1"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="31dp"
+            android:text="@string/txt_Raza"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtvNombreMascota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imvMascota"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="28dp"
+            android:text="Mishi"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtvRaza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtvNombreMascota"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="29dp"
+            android:text="Siames"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="34dp"
+            android:text="@string/txt_Cumpleaños"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtvCumpleaños"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtvRaza"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="27dp"
+            android:text="14/05/2015"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
