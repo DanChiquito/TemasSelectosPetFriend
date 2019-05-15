@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/catdog">
+
+
+    <TextView
+        android:id="@+id/txtRegistrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/txt_ingresedatos"
+        android:textSize="35sp"
+        android:textColor="@color/colortxtviews"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+    android:id="@+id/txtNombre"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/txt_nombre"
+
+    android:textColor="@color/colortxtviews"
+    android:textSize="20sp"
+
+    android:layout_below="@id/txtRegistrate"
+    android:layout_marginTop="15dp"
+    android:layout_alignStart="@id/edtNombreUsuario"/>
+
+    <EditText
+        android:id="@+id/edtNombreUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="@drawable/background_edittext"
+        android:hint="@string/edt_nombre"
+
+        android:layout_below="@+id/txtNombre"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/txtEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_edad"
+
+        android:textColor="@color/colortxtviews"
+        android:textSize="20sp"
+
+        android:layout_below="@id/edtNombreUsuario"
+        android:layout_alignStart="@id/edtNombreUsuario"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/edtEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:inputType="number"
+        android:background="@drawable/background_edt_small"
+
+        android:layout_below="@+id/txtEdad"
+        android:layout_alignStart="@+id/txtEdad"/>
+
+    <TextView
+        android:id="@+id/txtFechaNac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_fecha"
+
+        android:textColor="@color/colortxtviews"
+        android:textSize="20sp"
+
+        android:layout_below="@id/edtNombreUsuario"
+        android:layout_alignEnd="@id/edtNombreUsuario"
+        android:layout_marginTop="15dp"/>
+
+
+</RelativeLayout>

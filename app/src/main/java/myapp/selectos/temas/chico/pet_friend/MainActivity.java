@@ -23,13 +23,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickRegistrarse(View v){
         IniciarTransicion();
-        Intent intent = new Intent(this, AcercaDe.class);
-        startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
+
     }
 
     public void onClickAcercaCe(View v)
     {
         IniciarTransicion();
+        Intent intent = new Intent(this, AcercaDe.class);
+        startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
     }
 
     public void IniciarTransicion(){

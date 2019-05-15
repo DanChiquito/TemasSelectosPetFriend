@@ -11,4 +11,10 @@
     <string name="edt_password">Contraseña</string>
     <string name="btn_inisesion">Iniciar Sesión</string>
     <string name="txt_sin_cuenta">¿No tienes cuenta?</string>
+    <string name="edt_nombre">Juan Pérez López</string>
+    <string name="txt_ingresedatos">Ingrese sus datos</string>
+    <string name="txt_nombre">Ingrese su nombre</string>
+    <string name="txt_edad">Edad</string>
+    <string name="txt_fecha">Fecha de nacimiento</string>
+
 </resources>

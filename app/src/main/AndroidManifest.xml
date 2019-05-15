@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DatosUsuario"></activity>
+        <activity android:name=".RegistroUsuario"></activity>
+        <activity android:name=".DatosUsuario" />
         <activity android:name=".AcercaDe" />
         <activity android:name=".MainActivity">
             <intent-filter>
