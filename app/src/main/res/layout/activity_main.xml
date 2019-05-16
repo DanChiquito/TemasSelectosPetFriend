@@ -103,14 +103,13 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
 
-        android:background="@drawable/custom_button"
-        android:onClick="onClickRegistrarse"
-        android:text="@string/btn_Registrarse"
-
         android:layout_below="@id/txtNotienesCuenta"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        />
+
+        android:background="@drawable/custom_button"
+        android:onClick="onClickRegistrarse"
+        android:text="@string/btn_Registrarse" />
 
     <TextView
         android:id="@+id/txtQuienSoy"

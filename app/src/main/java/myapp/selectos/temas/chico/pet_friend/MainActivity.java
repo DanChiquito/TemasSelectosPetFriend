@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickRegistrarse(View v){
         IniciarTransicion();
+        Intent intent = new Intent(this, RegistroUsuario.class);
+        startActivity(intent,  ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
 
     }
 
