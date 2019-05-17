@@ -78,12 +78,13 @@
         android:id="@+id/btnIniciarSesion"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:background="@drawable/custom_button"
-        android:text="@string/btn_inisesion"
-
         android:layout_below="@+id/edtPassword"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_button"
+        android:onClick="onClickIniciarSesión"
+        android:text="@string/btn_inisesion" />
 
     <TextView
         android:id="@+id/txtNotienesCuenta"

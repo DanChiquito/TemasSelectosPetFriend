@@ -28,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void onClickIniciarSesión(View v){
+        IniciarTransicion();
+        Intent intent = new Intent(this, RecyclerMascota.class);
+        startActivity(intent,  ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
+
+    }
+
     public void onClickAcercaCe(View v)
     {
         IniciarTransicion();
