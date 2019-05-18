@@ -20,6 +20,7 @@
     <string name="txt_pass_ing">Ingrese una contraseña</string>
     <string name="txt_pass_rep">Confirme contraseña</string>
     <string name="btn_sig">Siguiente</string>
+    <string name="txt_name_pet">Nombre Animal</string>
 
     <string-array name="dia31">
         <item>1</item>
