@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".formularioMascota">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backGround1"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Switch
+            android:id="@+id/swtGrande"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView6"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/swt_Grande" />
+
+        <Switch
+            android:id="@+id/switch4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView6"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@+id/swtGrande"
+            android:text="@string/swt_Mediano" />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView6"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="14dp"
+            android:layout_toEndOf="@+id/switch4"
+            android:shadowColor="@color/colorBotonesSec"
+            android:text="@string/swt_Chico" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switch4"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="102dp"
+            android:layout_marginTop="91dp"
+            android:background="@drawable/boton_registrar"
+            android:text="Terminar"
+            android:textColor="@color/backGround1"
+            android:textColorHint="@color/backGround1" />
+
+        <EditText
+            android:id="@+id/edtCumple"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorBotonesSec"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="19/05/19"
+            android:inputType="date"
+            android:textColor="@color/backGround1"
+            android:textColorHint="@color/backGround1" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/txt_Cumpleaños"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="295dp"
+            android:text="@string/txt_Nombre"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView5"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="11dp"
+            android:background="@color/colorBotonesSec"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/backGround1"
+            android:textColorHint="@color/backGround1" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="185dp"
+            android:layout_marginTop="120dp"
+            android:text="@string/txt_Tamaño"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switch4"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="51dp"
+            android:layout_marginTop="23dp"
+            android:text="@string/txt_Raza"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="215dp"
+            android:layout_height="219dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="51dp"
+            app:srcCompat="@drawable/gato1" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="262dp"
+            android:layout_marginTop="220dp"
+            android:background="@drawable/boton_editar"
+            app:srcCompat="@drawable/ic_editar" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="181dp"
+            android:layout_marginTop="21dp"
+            android:text="@string/pcb_foto"
+            android:textSize="18sp" />
+
+        <ListView
+            android:id="@+id/lst_Raza"
+            android:layout_width="220dp"
+            android:layout_height="52dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="141dp"
+            android:layout_marginTop="568dp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText2"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@+id/textView4"
+            android:text="@string/txtv_Peso"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edt_Peso"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView10"
+            android:layout_marginStart="89dp"
+            android:layout_marginTop="17dp"
+            android:layout_toEndOf="@+id/edtCumple"
+            android:background="@color/colorBotonesSec"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="Kg"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/backGround1"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
