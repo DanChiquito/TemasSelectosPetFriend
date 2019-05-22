@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/catdog">
+
+
+    <TextView
+        android:id="@+id/txtRegistrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/txt_ingresedatos"
+        android:textSize="35sp"
+        android:textColor="@color/colortxtviews"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+    android:id="@+id/txtNombre"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/txt_nombre"
+
+    android:textColor="@color/colortxtviews"
+    android:textSize="20sp"
+
+    android:layout_below="@id/txtRegistrate"
+    android:layout_marginTop="15dp"
+    android:layout_alignStart="@id/edtNombreUsuario"/>
+
+    <EditText
+        android:id="@+id/edtNombreUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="@drawable/background_edittext"
+        android:hint="@string/edt_nombre"
+
+        android:layout_below="@+id/txtNombre"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/txtEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_edad"
+
+        android:textColor="@color/colortxtviews"
+        android:textSize="20sp"
+
+        android:layout_below="@id/edtNombreUsuario"
+        android:layout_alignStart="@id/edtNombreUsuario"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/edtEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:inputType="number"
+        android:background="@drawable/background_edt_small"
+
+        android:layout_below="@+id/txtEdad"
+        android:layout_alignStart="@+id/txtEdad"/>
+
+    <TextView
+        android:id="@+id/txtFechaNac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_fecha"
+
+        android:textColor="@color/colortxtviews"
+        android:textSize="20sp"
+
+        android:layout_below="@id/edtNombreUsuario"
+        android:layout_alignEnd="@id/edtNombreUsuario"
+        android:layout_marginTop="15dp"/>
+
+    <Spinner
+        android:id="@+id/spnDia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_edt_small"
+
+        android:layout_below="@+id/txtFechaNac"
+        android:layout_alignStart="@id/txtFechaNac"/>
+
+    <Spinner
+        android:id="@+id/spnMes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_edt_small"
+
+        android:layout_below="@+id/txtFechaNac"
+        android:layout_alignEnd="@id/txtFechaNac"/>
+
+    <TextView
+        android:id="@+id/txtIngCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_correo_ing"
+
+        android:textColor="@color/colortxtviews"
+        android:textSize="20sp"
+
+        android:layout_below="@id/edtEdad"
+        android:layout_alignStart="@id/edtNombreUsuario"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/edtCorreoIng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="@drawable/background_edittext"
+        android:hint="@string/edt_correo"
+        android:gravity="center"
+
+        android:layout_below="@+id/txtIngCorreo"
+        android:layout_alignStart="@+id/txtIngCorreo"/>
+
+    <TextView
+        android:id="@+id/txtIngPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_pass_ing"
+
+        android:textColor="@color/colortxtviews"
+        android:textSize="20sp"
+
+        android:layout_below="@id/edtCorreoIng"
+        android:layout_alignStart="@id/edtCorreoIng"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/edtNewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:background="@drawable/background_edittext"
+        android:hint="@string/edt_password"
+        android:gravity="center"
+
+        android:layout_below="@+id/txtIngPassword"
+        android:layout_alignStart="@+id/txtIngPassword"/>
+
+    <TextView
+        android:id="@+id/txtConPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_pass_rep"
+
+        android:textColor="@color/colortxtviews"
+        android:textSize="20sp"
+
+        android:layout_below="@id/edtNewPassword"
+        android:layout_alignStart="@id/edtNewPassword"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/edtConPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:background="@drawable/background_edittext"
+        android:hint="@string/edt_password"
+        android:gravity="center"
+
+        android:layout_below="@+id/txtConPass"
+        android:layout_alignStart="@+id/txtIngPassword"/>
+
+    <Button
+        android:id="@+id/btnSiguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        android:text="@string/btn_sig"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        />
+
+
+</RelativeLayout>

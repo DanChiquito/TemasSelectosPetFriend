@@ -1,16 +1,75 @@
 <resources>
     <string name="app_name">Pet-Friend</string>
     <string name="acerca_de">Somos un grupo de estudiantes de la Facultad de Ingeniería dedicados en innovar. Esta app fue diseñada con el propósito de ayudar a esas personas con el cuidado de sus mascotas. Esperamos y sea de su agrado</string>
-    <string name="quienes_somos">¿Quienes somos?</string>
+    <string name="quienes_somos">¿Quiénes somos?</string>
     <string name="btn_Registrarse">Regístrate</string>
     <string name="edt_correo">examplemail.@example.com</string>
     <string name="txt_bienvenido">¡Bienvenido!</string>
     <string name="txt_acercade">Acerca de</string>
-    <string name="txt_correo">Correo Electronico</string>
+    <string name="txt_correo">Correo Electrónico</string>
     <string name="txt_password">Contraseña</string>
     <string name="edt_password">Contraseña</string>
     <string name="btn_inisesion">Iniciar Sesión</string>
     <string name="txt_sin_cuenta">¿No tienes cuenta?</string>
+    <string name="edt_nombre">Juan Pérez López</string>
+    <string name="txt_ingresedatos">Ingrese sus datos</string>
+    <string name="txt_nombre">Ingrese su nombre</string>
+    <string name="txt_edad">Edad</string>
+    <string name="txt_fecha">Fecha de nacimiento</string>
+    <string name="txt_correo_ing">Ingrese un correo electrónico</string>
+    <string name="txt_pass_ing">Ingrese una contraseña</string>
+    <string name="txt_pass_rep">Confirme contraseña</string>
+    <string name="btn_sig">Siguiente</string>
+    <string name="txt_name_pet">Nombre Animal</string>
+    <string name="txt_hora_comer">Hora para comer</string>
+
+    <string-array name="dia31">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+
+    <string-array name="meses">
+        <item>Enero</item>
+        <item>Febrero</item>
+        <item>Marzo</item>
+        <item>Abril</item>
+        <item>Mayo</item>
+        <item>Junio</item>
+        <item>Julio</item>
+        <item>Agosto</item>
+        <item>Septiembre</item>
+        <item>Octubre</item>
+        <item>Noviembre</item>
+        <item>Diciembre</item>
+    </string-array>
     <string name="txt_Nombre">Nombre</string>
     <string name="txt_Raza">Raza</string>
     <string name="txt_Cumpleaños">Cumpleaños</string>
