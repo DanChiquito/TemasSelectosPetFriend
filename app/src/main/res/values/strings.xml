@@ -11,4 +11,14 @@
     <string name="edt_password">Contraseña</string>
     <string name="btn_inisesion">Iniciar Sesión</string>
     <string name="txt_sin_cuenta">¿No tienes cuenta?</string>
+    <string name="txt_Nombre">Nombre</string>
+    <string name="txt_Raza">Raza</string>
+    <string name="txt_Cumpleaños">Cumpleaños</string>
+    <string name="txt_Extraviado">!Está Extraviado¡</string>
+    <string name="txt_Tamaño">Tamaño</string>
+    <string name="swt_Grande">Grande</string>
+    <string name="swt_Mediano">Mediano</string>
+    <string name="swt_Chico">Chico</string>
+    <string name="pcb_foto">Foto</string>
+    <string name="txtv_Peso">Peso</string>
 </resources>
