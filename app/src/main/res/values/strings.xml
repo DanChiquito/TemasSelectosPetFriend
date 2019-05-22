@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">Pet-Friend</string>
     <string name="acerca_de">Somos un grupo de estudiantes de la Facultad de Ingeniería dedicados en innovar. Esta app fue diseñada con el propósito de ayudar a esas personas con el cuidado de sus mascotas. Esperamos y sea de su agrado</string>
-    <string name="quienes_somos">¿Quienes somos?</string>
+    <string name="quienes_somos">¿Quiénes somos?</string>
     <string name="btn_Registrarse">Regístrate</string>
     <string name="edt_correo">examplemail.@example.com</string>
     <string name="txt_bienvenido">¡Bienvenido!</string>
     <string name="txt_acercade">Acerca de</string>
-    <string name="txt_correo">Correo Electronico</string>
+    <string name="txt_correo">Correo Electrónico</string>
     <string name="txt_password">Contraseña</string>
     <string name="edt_password">Contraseña</string>
     <string name="btn_inisesion">Iniciar Sesión</string>
@@ -21,6 +21,7 @@
     <string name="txt_pass_rep">Confirme contraseña</string>
     <string name="btn_sig">Siguiente</string>
     <string name="txt_name_pet">Nombre Animal</string>
+    <string name="txt_hora_comer">Hora para comer</string>
 
     <string-array name="dia31">
         <item>1</item>

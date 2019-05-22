@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/txt_name_pet"
-            android:textColor="@color/cardview_dark_background"
+            android:textColor="@color/colorPrimary"
             android:textSize="25sp"
             android:textStyle="bold"
             
@@ -35,10 +35,15 @@
             android:layout_marginLeft="25dp"/>
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/txtHoraComer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="@string/txt_hora_comer"
+            android:textSize="20sp"
+
+            android:layout_alignStart="@+id/txtNamePet"
+            android:layout_below="@+id/txtNamePet"
+            android:layout_marginTop="2dp"/>
 
 
     </RelativeLayout>
