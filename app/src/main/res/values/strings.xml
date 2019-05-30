@@ -13,10 +13,10 @@
     <string name="txt_sin_cuenta">¿No tienes cuenta?</string>
     <string name="edt_nombre">Juan Pérez López</string>
     <string name="txt_ingresedatos">Ingrese sus datos</string>
-    <string name="txt_nombre">Ingrese su nombre</string>
+    <string name="txt_nombre">Nombre</string>
     <string name="txt_edad">Edad</string>
     <string name="txt_fecha">Fecha de nacimiento</string>
-    <string name="txt_correo_ing">Ingrese un correo electrónico</string>
+    <string name="txt_correo_ing">Correo electrónico</string>
     <string name="txt_pass_ing">Ingrese una contraseña</string>
     <string name="txt_pass_rep">Confirme contraseña</string>
     <string name="btn_sig">Siguiente</string>

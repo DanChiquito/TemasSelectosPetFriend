@@ -16,19 +16,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
 
-    <TextView
-    android:id="@+id/txtNombre"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/txt_nombre"
-
-    android:textColor="@color/colortxtviews"
-    android:textSize="20sp"
-
-    android:layout_below="@id/txtRegistrate"
-    android:layout_marginTop="15dp"
-    android:layout_alignStart="@id/edtNombreUsuario"/>
-
     <EditText
         android:id="@+id/edtNombreUsuario"
         android:layout_width="wrap_content"
@@ -36,9 +23,11 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:background="@drawable/background_edittext"
-        android:hint="@string/edt_nombre"
+        android:gravity="center"
+        android:hint="@string/txt_nombre"
 
-        android:layout_below="@+id/txtNombre"
+        android:layout_below="@+id/txtRegistrate"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"/>
 
     <TextView
@@ -96,19 +85,6 @@
         android:layout_below="@+id/txtFechaNac"
         android:layout_alignEnd="@id/txtFechaNac"/>
 
-    <TextView
-        android:id="@+id/txtIngCorreo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_correo_ing"
-
-        android:textColor="@color/colortxtviews"
-        android:textSize="20sp"
-
-        android:layout_below="@id/edtEdad"
-        android:layout_alignStart="@id/edtNombreUsuario"
-        android:layout_marginTop="15dp"/>
-
     <EditText
         android:id="@+id/edtCorreoIng"
         android:layout_width="wrap_content"
@@ -116,24 +92,13 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:background="@drawable/background_edittext"
-        android:hint="@string/edt_correo"
+        android:hint="@string/txt_correo_ing"
         android:gravity="center"
 
-        android:layout_below="@+id/txtIngCorreo"
-        android:layout_alignStart="@+id/txtIngCorreo"/>
+        android:layout_below="@+id/edtEdad"
+        android:layout_alignStart="@+id/edtEdad"
+        android:layout_marginTop="50dp"/>
 
-    <TextView
-        android:id="@+id/txtIngPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_pass_ing"
-
-        android:textColor="@color/colortxtviews"
-        android:textSize="20sp"
-
-        android:layout_below="@id/edtCorreoIng"
-        android:layout_alignStart="@id/edtCorreoIng"
-        android:layout_marginTop="15dp"/>
 
     <EditText
         android:id="@+id/edtNewPassword"
@@ -142,23 +107,11 @@
         android:ems="10"
         android:inputType="textPassword"
         android:background="@drawable/background_edittext"
-        android:hint="@string/edt_password"
+        android:hint="@string/txt_pass_ing"
         android:gravity="center"
 
-        android:layout_below="@+id/txtIngPassword"
-        android:layout_alignStart="@+id/txtIngPassword"/>
-
-    <TextView
-        android:id="@+id/txtConPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_pass_rep"
-
-        android:textColor="@color/colortxtviews"
-        android:textSize="20sp"
-
-        android:layout_below="@id/edtNewPassword"
-        android:layout_alignStart="@id/edtNewPassword"
+        android:layout_below="@+id/edtCorreoIng"
+        android:layout_alignStart="@+id/edtCorreoIng"
         android:layout_marginTop="15dp"/>
 
     <EditText
@@ -168,11 +121,13 @@
         android:ems="10"
         android:inputType="textPassword"
         android:background="@drawable/background_edittext"
-        android:hint="@string/edt_password"
+        android:hint="@string/txt_pass_rep"
         android:gravity="center"
 
-        android:layout_below="@+id/txtConPass"
-        android:layout_alignStart="@+id/txtIngPassword"/>
+        android:layout_below="@+id/edtNewPassword"
+        android:layout_alignStart="@+id/edtCorreoIng"
+        android:layout_marginTop="15dp"/>
+
 
     <Button
         android:id="@+id/btnSiguiente"
