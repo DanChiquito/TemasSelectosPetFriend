@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/catdog"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
     <TextView
         android:id="@+id/txtBienvenido"
@@ -15,7 +16,7 @@
         android:textSize="35sp"
         android:textColor="@color/colortxtviews"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="50dp"/>
 
     <TextView
         android:id="@+id/txtCorreo"
