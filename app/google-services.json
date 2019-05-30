@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "581136715342",
+    "firebase_url": "https://petfriendamigos.firebaseio.com",
+    "project_id": "petfriendamigos",
+    "storage_bucket": "petfriendamigos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581136715342:android:8646b2671833a090",
+        "android_client_info": {
+          "package_name": "myapp.selectos.temas.chico.pet_friend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581136715342-1db8p2am3kt8gb3n3gkt55uhegdlg857.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "myapp.selectos.temas.chico.pet_friend",
+            "certificate_hash": "2966af851ba6b7f751e63e876edaf45a414f08d9"
+          }
+        },
+        {
+          "client_id": "581136715342-k86arvu0fli0e0vfsk6n80f5qq1vg812.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1RJhklfOn1B3shoVpBgFrWbTGenxzJ_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581136715342-k86arvu0fli0e0vfsk6n80f5qq1vg812.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
