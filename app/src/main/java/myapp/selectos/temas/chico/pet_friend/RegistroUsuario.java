@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import com.google.firebase.auth.FirebaseAuth;
 
 public class RegistroUsuario extends AppCompatActivity{
@@ -55,4 +54,4 @@ public class RegistroUsuario extends AppCompatActivity{
             Toast.makeText(this, "se debe escribir un correo",Toast.LENGTH_LONG).show();
         }
     }
-}
+
