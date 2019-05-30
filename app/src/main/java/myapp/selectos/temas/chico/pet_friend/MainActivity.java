@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
     }
 
+    // Método para poder iniciar las transiciones entre activities
     public void IniciarTransicion(){
         Transition transition;
         transition = new Slide(Gravity.START);
