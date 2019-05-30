@@ -2,14 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="myapp.selectos.temas.chico.pet_friend">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <supports-screens
         android:largeScreens="true"
         android:normalScreens="true"
         android:smallScreens="true"
         android:xlargeScreens="true" />
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -18,6 +19,7 @@
         android:roundIcon="@mipmap/icono"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".actividades"></activity>
         <activity android:name=".PantallaInicio">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,9 +32,7 @@
         <activity android:name=".formularioMascota" />
         <activity android:name=".DatosMascota" />
         <activity android:name=".AcercaDe" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

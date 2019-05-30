@@ -56,7 +56,7 @@
 
             android:layout_below="@+id/imvMascota"
             android:layout_alignStart="@+id/btnEliminar"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:textColor="@color/colortext"
             android:text="@string/txt_Nombre"
             android:textSize="20sp" />
@@ -68,7 +68,7 @@
             android:layout_below="@+id/txtv1"
             android:layout_alignStart="@+id/txtv1"
             android:textColor="@color/colortext"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:text="@string/txt_Raza"
             android:textSize="20sp" />
 
@@ -79,7 +79,7 @@
             android:layout_alignEnd="@+id/btnEliminar"
             android:textColor="@color/colortext"
             android:layout_below="@+id/imvMascota"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:text="Mishi"
             android:textSize="20dp" />
 
@@ -90,7 +90,7 @@
             android:layout_below="@+id/txtvNombreMascota"
             android:textColor="@color/colortext"
             android:layout_alignEnd="@+id/txtvNombreMascota"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:text="Siames"
             android:textSize="20sp" />
 
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/txt2"
             android:layout_alignStart="@id/txt2"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:textColor="@color/colortext"
             android:text="@string/txt_Cumpleaños"
             android:textSize="20sp" />
@@ -112,7 +112,7 @@
             android:layout_below="@+id/txtvRaza"
             android:layout_alignEnd="@+id/txtvRaza"
             android:textColor="@color/colortext"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:text="14/05/2015"
             android:textSize="20dp" />
 
