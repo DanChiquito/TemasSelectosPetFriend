@@ -49,15 +49,12 @@ public class RegistroUsuario extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
     }
 
-
-
-
-
     private void RegistrarUsuario() {
         correo = edtCorreoIng.getText().toString().trim();
         password = edtNewPassword.getText().toString().trim();
 
         if (TextUtils.isEmpty(correo)) {
+
             Toast.makeText(this, "Se debe escribir un correo", Toast.LENGTH_LONG).show();
             return;
         }
@@ -65,6 +62,8 @@ public class RegistroUsuario extends AppCompatActivity {
         if (TextUtils.isEmpty(password))
         {
             Toast.makeText(this, "Se debe escribir una contraseña", Toast.LENGTH_SHORT).show();
+            return;
+
         }
         progressDialog.setMessage("Realizando Registro en línea");
         progressDialog.show();
@@ -77,10 +76,6 @@ public class RegistroUsuario extends AppCompatActivity {
         });
 
     }
-
-
-
-
 
 }
 
