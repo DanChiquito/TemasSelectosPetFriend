@@ -29,8 +29,6 @@
         android:ems="10"
         android:hint="@string/edt_correo"
         android:inputType="textPersonName"
-
-
         android:layout_below="@+id/txtCorreo"
         android:layout_centerHorizontal="true"
         />

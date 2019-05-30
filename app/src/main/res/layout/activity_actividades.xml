@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actividades">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <ImageView
+            android:id="@+id/imvFotoMascota"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            app:srcCompat="@drawable/gato1" />
+
+        <TextView
+            android:id="@+id/txtvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/imvFotoMascota"
+            android:layout_alignStart="@id/imvFotoMascota"
+            android:layout_alignEnd="@id/imvFotoMascota"
+            android:background="@color/colorBotonesSec"
+            android:gravity="center"
+            android:textColor="@color/colortxtviews"
+            android:text="@string/txt_Nombre"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtvComer"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txtvNombre"
+            android:layout_alignStart="@id/txtvNombre"
+            android:layout_alignEnd="@id/txtvNombre"
+            android:background="@color/colorBotonesPrim"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="¿Cada cuánto debe llenarse su plato?"
+            android:textColor="@color/colortxtviews"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edtComer"
+            android:layout_width="115dp"
+            android:layout_height="40dp"
+            android:background="@color/colortxtviews"
+            android:layout_below="@id/txtvComer"
+            android:layout_alignStart="@id/txtvNombre"
+            android:layout_alignEnd="@id/txtvNombre"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Horas"
+            android:inputType="textPersonName"
+            android:textColor="@color/colortext"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtvBañar"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/edtComer"
+            android:layout_alignStart="@id/txtvNombre"
+            android:layout_alignEnd="@id/txtvNombre"
+            android:background="@color/colorBotonesPrim"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="¿Cada cuánto se debe bañar?"
+            android:textColor="@color/colortxtviews"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edtBañar"
+            android:layout_width="115dp"
+            android:layout_height="40dp"
+            android:background="@color/colortxtviews"
+            android:layout_below="@id/txtvBañar"
+            android:layout_alignStart="@id/txtvNombre"
+            android:layout_alignEnd="@id/txtvNombre"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Horas"
+            android:inputType="textPersonName"
+            android:textColor="@color/colortext"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtvVeterinario"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/edtBañar"
+            android:layout_alignStart="@id/txtvNombre"
+            android:layout_alignEnd="@id/txtvNombre"
+            android:background="@color/colorBotonesPrim"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Próxima visita al veterinario"
+            android:textColor="@color/colortxtviews"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edtfechavet"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_below="@id/txtvVeterinario"
+            android:layout_alignStart="@id/txtvVeterinario"
+            android:textSize="18sp"
+            android:layout_alignEnd="@id/txtvVeterinario"
+            android:ems="10"
+            android:hint="dd/mm/aa"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/edthoravet"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:layout_below="@id/edtfechavet"
+            android:layout_alignEnd="@id/edtfechavet"
+            android:layout_alignStart="@id/edtfechavet"
+            android:gravity="center"
+            android:hint="hh:mm"
+            android:inputType="time" />
+
+        <EditText
+            android:id="@+id/edtdirecvet"
+            android:layout_width="wrap_content"
+            android:background="@drawable/background_edittext"
+            android:layout_height="40dp"
+            android:layout_below="@id/edthoravet"
+            android:layout_alignStart="@id/edtfechavet"
+            android:layout_alignEnd="@id/edtfechavet"
+            android:layout_marginStart="-1dp"
+            android:layout_marginEnd="1dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Dirección"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/txtvVacuna"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/edtdirecvet"
+            android:layout_alignStart="@id/txtvNombre"
+            android:layout_alignEnd="@id/txtvNombre"
+            android:background="@color/colorBotonesPrim"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Próxima vacuna"
+            android:textColor="@color/colortxtviews"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edtfechavac"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_below="@id/txtvVacuna"
+            android:layout_alignStart="@id/txtvVeterinario"
+            android:textSize="18sp"
+            android:layout_alignEnd="@id/txtvVeterinario"
+            android:ems="10"
+            android:hint="dd/mm/aa"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/edthoravac"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:layout_below="@id/edtfechavac"
+            android:layout_alignEnd="@id/edtfechavet"
+            android:layout_alignStart="@id/edtfechavet"
+            android:gravity="center"
+            android:hint="hh:mm"
+            android:inputType="time" />
+
+        <EditText
+            android:id="@+id/edtdirecvac"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:layout_below="@id/edthoravac"
+            android:layout_alignStart="@id/edtfechavet"
+            android:layout_alignEnd="@id/edtfechavet"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:hint="Dirección"     />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/custom_button"
+            android:layout_below="@+id/edtdirecvac"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:text="Guardar"
+            android:textColor="@color/backGround1"
+            android:textColorHint="@color/backGround1"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

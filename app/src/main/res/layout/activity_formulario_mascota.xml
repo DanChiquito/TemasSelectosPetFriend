@@ -9,47 +9,45 @@
 
     <Switch
         android:id="@+id/swtGrande"
-        android:layout_width="97dp"
-        android:layout_height="38dp"
-        android:layout_below="@+id/edtCumple"
+        android:layout_width="93dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/txtvTamaño"
         android:layout_alignStart="@+id/edtCumple"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:textColor="@color/colortext"
         android:text="@string/swt_Grande" />
 
         <Switch
             android:id="@+id/swMediano"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
             android:layout_below="@+id/txtvTamaño"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="5dp"
             android:layout_centerHorizontal="true"
+            android:textSize="14sp"
+            android:textColor="@color/colortext"
             android:text="@string/swt_Mediano" />
 
     <Switch
         android:id="@+id/swChico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edt_Peso"
+        android:layout_width="93dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/txtvTamaño"
         android:layout_alignEnd="@+id/edt_Peso"
-        android:layout_marginStart="30dp"
-
-        android:layout_marginTop="67dp"
-        android:layout_marginEnd="7dp"
-        android:shadowColor="@color/colorBotonesSec"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:textColor="@color/colortext"
         android:text="@string/swt_Chico" />
 
     <Button
         android:id="@+id/btnTerminar"
-        android:layout_width="204dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spnRazas"
-        android:layout_alignStart="@+id/txtvRaza"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="45dp"
-        android:background="@drawable/boton_registrar"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/custom_button"
         android:onClick="OnCLickTerminar"
         android:text="Terminar"
         android:textColor="@color/backGround1"
@@ -57,16 +55,14 @@
 
     <EditText
         android:id="@+id/edtCumple"
-        android:layout_width="112dp"
-        android:layout_height="wrap_content"
+        android:layout_width="115dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/txtvCumpleaños"
         android:layout_alignStart="@+id/txtvCumpleaños"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorBotonesSec"
+        android:background="@color/colorBotonesPrim"
         android:ems="10"
-        android:gravity="center_horizontal"
-        android:hint="19/05/19"
+        android:gravity="center"
+        android:hint="dd/mm/aa"
         android:inputType="date"
         android:textColor="@color/backGround1"
         android:textColorHint="@color/backGround1" />
@@ -77,35 +73,33 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/edtNombreMascota"
         android:layout_alignStart="@+id/edtNombreMascota"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colortext"
         android:text="@string/txt_Cumpleaños"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/txtvNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imvFotoMascota"
-        android:layout_marginTop="10dp"
-
-        android:layout_marginRight="-18dp"
-        android:layout_toLeftOf="@+id/imvFotoMascota"
+        android:layout_marginTop="20dp"
+        android:layout_alignStart="@id/imvFotoMascota"
+        android:textColor="@color/colortext"
         android:text="@string/txt_Nombre"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/edtNombreMascota"
         android:layout_width="172dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtvNombre"
-        android:layout_alignStart="@+id/txtvNombre"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorBotonesSec"
+        android:layout_below="@id/txtvNombre"
+        android:layout_alignStart="@id/imvFotoMascota"
+        android:background="@drawable/background_edittext"
+        android:backgroundTint="@color/colorBotonesPrim"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textColor="@color/backGround1"
+        android:textColor="@color/colortext"
         android:textColorHint="@color/backGround1" />
 
         <TextView
@@ -113,10 +107,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edtCumple"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
+            android:textColor="@color/colortext"
             android:text="@string/txt_Tamaño"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
     <TextView
         android:id="@+id/txtvRaza"
@@ -124,64 +119,50 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/swMediano"
         android:layout_alignStart="@+id/swtGrande"
-        android:layout_marginStart="4dp"
         android:layout_marginTop="15dp"
         android:text="@string/txt_Raza"
-        android:textSize="18sp" />
+        android:textColor="@color/colortext"
+        android:textSize="20sp" />
 
     <ImageView
         android:id="@+id/imvFotoMascota"
-        android:layout_width="229dp"
-        android:layout_height="248dp"
-        android:layout_alignParentTop="true"
+        android:layout_width="300dp"
+        android:layout_height="254dp"
+
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="50dp"
         app:srcCompat="@drawable/gato1" />
 
         <ImageButton
             android:id="@+id/imbEditarFoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txtvFoto"
-            android:layout_marginStart="65dp"
-            android:layout_marginTop="180dp"
+            android:layout_alignEnd="@id/imvFotoMascota"
+            android:layout_alignBottom="@id/imvFotoMascota"
             android:background="@drawable/boton_editar"
-            android:layout_toRightOf="@+id/edtNombreMascota"
             android:onClick="onClickEditarFoto"
             app:srcCompat="@drawable/ic_editar" />
-
-    <TextView
-        android:id="@+id/txtvFoto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="@string/pcb_foto"
-        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/txtvPeso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtNombreMascota"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/txtvCumpleaños"
+        android:layout_alignEnd="@id/imvFotoMascota"
+        android:layout_marginTop="30dp"
         android:text="@string/txtv_Peso"
-        android:textSize="18sp" />
+        android:textColor="@color/colortext"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/edt_Peso"
         android:layout_width="115dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtvPeso"
-        android:layout_marginStart="89dp"
-        android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/edtCumple"
-        android:background="@color/colorBotonesSec"
+        android:layout_height="40dp"
+        android:background="@color/colorBotonesPrim"
+        android:layout_below="@id/txtvPeso"
+        android:layout_alignEnd="@id/txtvPeso"
         android:ems="10"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:hint="Kg"
         android:inputType="textPersonName"
         android:textColorHint="@color/backGround1"
@@ -192,9 +173,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtvNombre"
-        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@id/txtvPerro"
+        android:layout_toLeftOf="@id/txtvGato"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/txtvPerro"
         android:onClick="onClickSeleccionaRaza" />
 
     <TextView
@@ -202,10 +183,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtvNombre"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="26dp"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/edtNombreMascota"
+        android:layout_toRightOf="@id/edtNombreMascota"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/colortext"
         android:text="Perro" />
 
     <TextView
@@ -213,17 +195,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtvNombre"
-        android:layout_marginStart="11dp"
         android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/swPerroGato"
+        android:layout_alignEnd="@id/imvFotoMascota"
+        android:textSize="14sp"
+        android:textColor="@color/colortext"
         android:text="Gato" />
 
     <Spinner
         android:id="@+id/spnRazas"
         android:layout_width="192dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_below="@+id/swMediano"
-        android:layout_marginStart="37dp"
+        android:layout_alignEnd="@id/swChico"
+        android:layout_alignStart="@id/swMediano"
+
         android:layout_marginTop="15dp"
         android:layout_toEndOf="@+id/txtvRaza" />
 

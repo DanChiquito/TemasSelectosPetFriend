@@ -12,7 +12,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class RegistroUsuario extends AppCompatActivity{
+public class RegistroUsuario extends AppCompatActivity {
 
     private Spinner spnDia;
     private Spinner spnMes;
@@ -44,14 +44,13 @@ public class RegistroUsuario extends AppCompatActivity{
 
     }
 
-    private void RegistrarUsuario()
-    {
+    private void RegistrarUsuario() {
         correo = edtCorreoIng.getText().toString().trim();
         password = edtNewPassword.getText().toString().trim();
 
-        if (TextUtils.isEmpty(correo))
-        {
-            Toast.makeText(this, "se debe escribir un correo",Toast.LENGTH_LONG).show();
+        if (TextUtils.isEmpty(correo)) {
+            Toast.makeText(this, "se debe escribir un correo", Toast.LENGTH_LONG).show();
         }
     }
 
+}
