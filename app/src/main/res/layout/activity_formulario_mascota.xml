@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,20 +7,24 @@
     tools:context=".formularioMascota">
 
 
-    <Switch
-        android:id="@+id/swtGrande"
-        android:layout_width="93dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/txtvTamaño"
-        android:layout_alignStart="@+id/edtCumple"
-        android:layout_marginTop="5dp"
-        android:textSize="14sp"
-        android:textColor="@color/colortext"
-        android:text="@string/swt_Grande" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Switch
+            android:id="@+id/swtGrande"
+            android:layout_width="93dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txtvTamaño"
+            android:layout_alignStart="@+id/edtCumple"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:textColor="@color/colortext"
+            android:text="@string/swt_Grande" />
 
         <Switch
             android:id="@+id/swMediano"
-            android:layout_width="100dp"
+            android:layout_width="105dp"
             android:layout_height="40dp"
             android:layout_below="@+id/txtvTamaño"
             android:layout_marginTop="5dp"
@@ -29,78 +33,79 @@
             android:textColor="@color/colortext"
             android:text="@string/swt_Mediano" />
 
-    <Switch
-        android:id="@+id/swChico"
-        android:layout_width="93dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/txtvTamaño"
-        android:layout_alignEnd="@+id/edt_Peso"
-        android:layout_marginTop="5dp"
-        android:textSize="14sp"
-        android:textColor="@color/colortext"
-        android:text="@string/swt_Chico" />
+        <Switch
+            android:id="@+id/swChico"
+            android:layout_width="93dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txtvTamaño"
+            android:layout_alignEnd="@+id/edt_Peso"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:textColor="@color/colortext"
+            android:text="@string/swt_Chico" />
 
-    <Button
-        android:id="@+id/btnTerminar"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/custom_button"
-        android:onClick="OnCLickTerminar"
-        android:text="Terminar"
-        android:textColor="@color/backGround1"
-        android:textColorHint="@color/backGround1" />
+        <Button
+            android:id="@+id/btnTerminar"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/spnRazas"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/custom_button"
+            android:onClick="OnCLickTerminar"
+            android:text="Terminar"
+            android:textColor="@color/backGround1"
+            android:textColorHint="@color/backGround1" />
 
-    <EditText
-        android:id="@+id/edtCumple"
-        android:layout_width="115dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/txtvCumpleaños"
-        android:layout_alignStart="@+id/txtvCumpleaños"
-        android:background="@color/colorBotonesPrim"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="dd/mm/aa"
-        android:inputType="date"
-        android:textColor="@color/backGround1"
-        android:textColorHint="@color/backGround1" />
+        <EditText
+            android:id="@+id/edtCumple"
+            android:layout_width="115dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txtvCumpleaños"
+            android:layout_alignStart="@+id/txtvCumpleaños"
+            android:background="@color/colorBotonesPrim"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="dd/mm/aa"
+            android:inputType="date"
+            android:textColor="@color/backGround1"
+            android:textColorHint="@color/backGround1" />
 
-    <TextView
-        android:id="@+id/txtvCumpleaños"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/edtNombreMascota"
-        android:layout_alignStart="@+id/edtNombreMascota"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/colortext"
-        android:text="@string/txt_Cumpleaños"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/txtvCumpleaños"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtNombreMascota"
+            android:layout_alignStart="@+id/edtNombreMascota"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colortext"
+            android:text="@string/txt_Cumpleaños"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/txtvNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imvFotoMascota"
-        android:layout_marginTop="20dp"
-        android:layout_alignStart="@id/imvFotoMascota"
-        android:textColor="@color/colortext"
-        android:text="@string/txt_Nombre"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/txtvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imvFotoMascota"
+            android:layout_marginTop="20dp"
+            android:layout_alignStart="@id/imvFotoMascota"
+            android:textColor="@color/colortext"
+            android:text="@string/txt_Nombre"
+            android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/edtNombreMascota"
-        android:layout_width="172dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtvNombre"
-        android:layout_alignStart="@id/imvFotoMascota"
-        android:background="@drawable/background_edittext"
-        android:backgroundTint="@color/colorBotonesPrim"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="@color/colortext"
-        android:textColorHint="@color/backGround1" />
+        <EditText
+            android:id="@+id/edtNombreMascota"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtvNombre"
+            android:layout_alignStart="@id/imvFotoMascota"
+            android:background="@drawable/background_edittext"
+            android:backgroundTint="@color/colorBotonesPrim"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/colortext"
+            android:textColorHint="@color/backGround1" />
 
         <TextView
             android:id="@+id/txtvTamaño"
@@ -113,25 +118,25 @@
             android:text="@string/txt_Tamaño"
             android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/txtvRaza"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/swMediano"
-        android:layout_alignStart="@+id/swtGrande"
-        android:layout_marginTop="15dp"
-        android:text="@string/txt_Raza"
-        android:textColor="@color/colortext"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/txtvRaza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/swMediano"
+            android:layout_alignStart="@+id/swtGrande"
+            android:layout_marginTop="15dp"
+            android:text="@string/txt_Raza"
+            android:textColor="@color/colortext"
+            android:textSize="20sp" />
 
-    <ImageView
-        android:id="@+id/imvFotoMascota"
-        android:layout_width="300dp"
-        android:layout_height="254dp"
+        <ImageView
+            android:id="@+id/imvFotoMascota"
+            android:layout_width="300dp"
+            android:layout_height="254dp"
 
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        app:srcCompat="@drawable/gato1" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            app:srcCompat="@drawable/gato1" />
 
         <ImageButton
             android:id="@+id/imbEditarFoto"
@@ -143,74 +148,75 @@
             android:onClick="onClickEditarFoto"
             app:srcCompat="@drawable/ic_editar" />
 
-    <TextView
-        android:id="@+id/txtvPeso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edtNombreMascota"
-        android:layout_alignEnd="@id/imvFotoMascota"
-        android:layout_marginTop="30dp"
-        android:text="@string/txtv_Peso"
-        android:textColor="@color/colortext"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/txtvPeso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtNombreMascota"
+            android:layout_alignEnd="@id/imvFotoMascota"
+            android:layout_marginTop="20dp"
+            android:text="@string/txtv_Peso"
+            android:textColor="@color/colortext"
+            android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/edt_Peso"
-        android:layout_width="115dp"
-        android:layout_height="40dp"
-        android:background="@color/colorBotonesPrim"
-        android:layout_below="@id/txtvPeso"
-        android:layout_alignEnd="@id/txtvPeso"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Kg"
-        android:inputType="textPersonName"
-        android:textColorHint="@color/backGround1"
-        android:textSize="18sp" />
+        <EditText
+            android:id="@+id/edt_Peso"
+            android:layout_width="115dp"
+            android:layout_height="40dp"
+            android:background="@color/colorBotonesPrim"
+            android:layout_below="@id/txtvPeso"
+            android:layout_alignEnd="@id/txtvPeso"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Kg"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/backGround1"
+            android:textSize="18sp" />
 
-    <Switch
-        android:id="@+id/swPerroGato"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtvNombre"
-        android:layout_toRightOf="@id/txtvPerro"
-        android:layout_toLeftOf="@id/txtvGato"
-        android:layout_marginTop="10dp"
-        android:onClick="onClickSeleccionaRaza" />
+        <Switch
+            android:id="@+id/swPerroGato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtvNombre"
+            android:layout_toRightOf="@id/txtvPerro"
+            android:layout_toLeftOf="@id/txtvGato"
+            android:layout_marginTop="10dp"
+            android:onClick="onClickSeleccionaRaza" />
 
-    <TextView
-        android:id="@+id/txtvPerro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtvNombre"
-        android:layout_marginTop="10dp"
-        android:layout_toRightOf="@id/edtNombreMascota"
-        android:layout_marginLeft="10dp"
-        android:textSize="14sp"
-        android:textColor="@color/colortext"
-        android:text="Perro" />
+        <TextView
+            android:id="@+id/txtvPerro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtvNombre"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/edtNombreMascota"
+            android:layout_marginLeft="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/colortext"
+            android:text="Perro" />
 
-    <TextView
-        android:id="@+id/txtvGato"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtvNombre"
-        android:layout_marginTop="10dp"
-        android:layout_alignEnd="@id/imvFotoMascota"
-        android:textSize="14sp"
-        android:textColor="@color/colortext"
-        android:text="Gato" />
+        <TextView
+            android:id="@+id/txtvGato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtvNombre"
+            android:layout_marginTop="10dp"
+            android:layout_alignEnd="@id/imvFotoMascota"
+            android:textSize="14sp"
+            android:textColor="@color/colortext"
+            android:text="Gato" />
 
-    <Spinner
-        android:id="@+id/spnRazas"
-        android:layout_width="192dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/swMediano"
-        android:layout_alignEnd="@id/swChico"
-        android:layout_alignStart="@id/swMediano"
+        <Spinner
+            android:id="@+id/spnRazas"
+            android:layout_width="192dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/swMediano"
+            android:layout_alignEnd="@id/swChico"
+            android:layout_alignStart="@id/swMediano"
 
-        android:layout_marginTop="15dp"
-        android:layout_toEndOf="@+id/txtvRaza" />
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/txtvRaza" />
+    </RelativeLayout>
 
 
-</RelativeLayout>
+</ScrollView>
