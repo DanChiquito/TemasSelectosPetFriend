@@ -9,11 +9,13 @@
         android:smallScreens="true"
         android:xlargeScreens="true" />
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/logopetfriend2"
+        android:icon="@mipmap/icono"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/logopetfriend2"
+        android:roundIcon="@mipmap/icono"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".PantallaInicio">

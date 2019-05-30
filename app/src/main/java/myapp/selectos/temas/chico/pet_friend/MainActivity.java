@@ -41,10 +41,11 @@ public class MainActivity extends AppCompatActivity {
     public void onClickAcercaCe(View v)
     {
         IniciarTransicion();
-        Intent intent = new Intent(this, formularioMascota.class);
+        Intent intent = new Intent(this, AcercaDe.class);
         startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
     }
 
+    // Método para poder iniciar las transiciones entre activities
     public void IniciarTransicion(){
         Transition transition;
         transition = new Slide(Gravity.START);
