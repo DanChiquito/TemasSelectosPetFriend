@@ -8,27 +8,14 @@
     >
 
     <TextView
-        android:id="@+id/txtBienvenido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/txt_bienvenido"
-        android:textSize="35sp"
-        android:textColor="@color/colortxtviews"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"/>
-
-    <TextView
         android:id="@+id/txtCorreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_correo"
-
+        android:layout_alignParentTop="true"
         android:textColor="@color/colortxtviews"
         android:textSize="20sp"
-
-        android:layout_below="@id/txtBienvenido"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="50dp"
         android:layout_alignStart="@id/edtCorreo"
 
         />
@@ -77,38 +64,37 @@
 
     <Button
         android:id="@+id/btnIniciarSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/edtPassword"
         android:layout_centerHorizontal="true"
-
         android:layout_marginTop="20dp"
         android:background="@drawable/custom_button"
         android:onClick="onClickIniciarSesión"
+        android:textSize="14dp"
         android:text="@string/btn_inisesion" />
 
     <TextView
         android:id="@+id/txtNotienesCuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txt_sin_cuenta"
-
-        android:textColor="@color/colortxtviews"
-        android:textSize="25sp"
-
         android:layout_below="@+id/btnIniciarSesion"
+
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="40dp"
+
+        android:text="@string/txt_sin_cuenta"
+        android:textColor="@color/colortxtviews"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btnRegistrar"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
 
         android:layout_below="@id/txtNotienesCuenta"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-
         android:background="@drawable/custom_button"
         android:onClick="onClickRegistrarse"
         android:text="@string/btn_Registrarse" />

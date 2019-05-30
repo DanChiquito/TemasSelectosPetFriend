@@ -11,10 +11,10 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/txt_ingresedatos"
-        android:textSize="35sp"
+        android:textSize="25dp"
         android:textColor="@color/colortxtviews"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="50dp"/>
 
     <EditText
         android:id="@+id/edtNombreUsuario"
@@ -27,63 +27,8 @@
         android:hint="@string/txt_nombre"
 
         android:layout_below="@+id/txtRegistrate"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"/>
-
-    <TextView
-        android:id="@+id/txtEdad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_edad"
-
-        android:textColor="@color/colortxtviews"
-        android:textSize="20sp"
-
-        android:layout_below="@id/edtNombreUsuario"
-        android:layout_alignStart="@id/edtNombreUsuario"
-        android:layout_marginTop="15dp"/>
-
-    <EditText
-        android:id="@+id/edtEdad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="3"
-        android:inputType="number"
-        android:background="@drawable/background_edt_small"
-
-        android:layout_below="@+id/txtEdad"
-        android:layout_alignStart="@+id/txtEdad"/>
-
-    <TextView
-        android:id="@+id/txtFechaNac"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_fecha"
-
-        android:textColor="@color/colortxtviews"
-        android:textSize="20sp"
-
-        android:layout_below="@id/edtNombreUsuario"
-        android:layout_alignEnd="@id/edtNombreUsuario"
-        android:layout_marginTop="15dp"/>
-
-    <Spinner
-        android:id="@+id/spnDia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_edt_small"
-
-        android:layout_below="@+id/txtFechaNac"
-        android:layout_alignStart="@id/txtFechaNac"/>
-
-    <Spinner
-        android:id="@+id/spnMes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_edt_small"
-
-        android:layout_below="@+id/txtFechaNac"
-        android:layout_alignEnd="@id/txtFechaNac"/>
 
     <EditText
         android:id="@+id/edtCorreoIng"
@@ -95,9 +40,9 @@
         android:hint="@string/txt_correo_ing"
         android:gravity="center"
 
-        android:layout_below="@+id/edtEdad"
-        android:layout_alignStart="@+id/edtEdad"
-        android:layout_marginTop="50dp"/>
+        android:layout_below="@+id/edtNombreUsuario"
+        android:layout_alignStart="@+id/edtNombreUsuario"
+        android:layout_marginTop="30dp"/>
 
 
     <EditText
@@ -112,7 +57,7 @@
 
         android:layout_below="@+id/edtCorreoIng"
         android:layout_alignStart="@+id/edtCorreoIng"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="30dp"/>
 
     <EditText
         android:id="@+id/edtConPass"
@@ -126,19 +71,19 @@
 
         android:layout_below="@+id/edtNewPassword"
         android:layout_alignStart="@+id/edtCorreoIng"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="30dp"/>
 
 
     <Button
         android:id="@+id/btnSiguiente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
         android:background="@drawable/custom_button"
         android:text="@string/btn_sig"
 
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="50dp"
         />
 
 

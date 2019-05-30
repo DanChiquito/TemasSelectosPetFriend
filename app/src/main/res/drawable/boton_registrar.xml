@@ -8,8 +8,8 @@
         android:bottomRightRadius="15dp"/>
 
     <gradient
-        android:startColor="#7986cb"
-        android:endColor="#9fa8da"
+        android:startColor="@color/colorBotonesPrim"
+        android:endColor="@color/colorBotonesSec"
         android:angle="45"/>
 
     <padding

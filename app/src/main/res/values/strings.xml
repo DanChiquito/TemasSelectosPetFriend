@@ -70,10 +70,40 @@
         <item>Noviembre</item>
         <item>Diciembre</item>
     </string-array>
+    <string-array name="razasPerro">
+        <item>Beagle</item>
+        <item>Bulldog</item>
+        <item>Dalmata</item>
+        <item>Chihuahua</item>
+        <item>Cocker</item>
+        <item>Doberman</item>
+        <item>Husky Siberiano</item>
+        <item>Labrador</item>
+        <item>Pastor Alemán</item>
+        <item>Pastor Australiano</item>
+        <item>Pitbull</item>
+        <item>Pomerania</item>
+        <item>Pug</item>
+        <item>Poodle</item>
+        <item>Rotweiler</item>
+        <item>Schnauzer</item>
+        <item>Xoloitzcuintle</item>
+    </string-array>
+    <string-array name="razasGato">
+        <item>Abisinio</item>
+        <item>Azul Ruso</item>
+        <item>Korat</item>
+        <item>Highland Fold</item>
+        <item> Ragdoll</item>
+        <item>Singapura</item>
+        <item>Siames</item>
+        <item>Sphynx</item>
+
+    </string-array>
     <string name="txt_Nombre">Nombre</string>
     <string name="txt_Raza">Raza</string>
     <string name="txt_Cumpleaños">Cumpleaños</string>
-    <string name="txt_Extraviado">!Está Extraviado¡</string>
+    <string name="txt_Eliminar">Eliminar mascota</string>
     <string name="txt_Tamaño">Tamaño</string>
     <string name="swt_Grande">Grande</string>
     <string name="swt_Mediano">Mediano</string>
