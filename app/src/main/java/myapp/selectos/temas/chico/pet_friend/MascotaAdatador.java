@@ -50,8 +50,8 @@ public class MascotaAdatador extends RecyclerView.Adapter<MascotaAdatador.Mascot
 
         MascotaDatos currentItem = mascotaDatos.get(i);
 
-        mascotaViewHolder.imvPet.setImageResource(currentItem.getImvFoto());
-        mascotaViewHolder.txtNaPet.setText(currentItem.getNamePet());
+        mascotaViewHolder.imvPet.setImageResource(R.drawable.catdog);
+        mascotaViewHolder.txtNaPet.setText(currentItem.getNombre());
     }
 
     @Override
