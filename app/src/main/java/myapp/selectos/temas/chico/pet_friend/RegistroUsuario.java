@@ -1,6 +1,8 @@
 package myapp.selectos.temas.chico.pet_friend;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,10 +31,7 @@ public class RegistroUsuario extends AppCompatActivity {
     private EditText edtCorreoIng;
     private EditText edtNewPassword;
     private EditText edtPassConf;
-    private Button btnSiguiente;
-
     private FirebaseAuth mAuth;
-    private FirebaseAuth.AuthStateListener mStateListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,16 +42,28 @@ public class RegistroUsuario extends AppCompatActivity {
         edtNomUsuario = findViewById(R.id.edtNombreUsuario);
         edtNewPassword = findViewById(R.id.edtNewPassword);
         edtPassConf = findViewById(R.id.edtConPass);
-        btnSiguiente = findViewById(R.id.btnSiguiente);
         progressDialog = new ProgressDialog(this);
-
         mAuth = FirebaseAuth.getInstance();
     }
 
-    private void RegistrarUsuario() {
+    public void onClickSiguiente(View v)
+    {
         correo = edtCorreoIng.getText().toString().trim();
         password = edtNewPassword.getText().toString().trim();
+        nombre = edtNomUsuario.getText().toString().trim();
+        passwordConf = edtPassConf.getText().toString().trim();
 
+        if (TextUtils.isEmpty(nombre))
+        {
+            Toast.makeText(this, "Debes tener al menos un nombre, ¿no?", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (TextUtils.isEmpty(passwordConf))
+        {
+            Toast.makeText(this, "Parece que se te olvidó confirmar la contraseña", Toast.LENGTH_LONG).show();
+            return;
+        }
         if (TextUtils.isEmpty(correo)) {
 
             Toast.makeText(this, "Se debe escribir un correo", Toast.LENGTH_LONG).show();
@@ -65,37 +76,54 @@ public class RegistroUsuario extends AppCompatActivity {
             return;
 
         }
-        progressDialog.setMessage("Realizando Registro en línea");
-        progressDialog.show();
+        if (passwordConf.equals(password))
+        {
+            RegistrarUsuario();
 
-        mAuth.createUserWithEmailAndPassword(correo, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()){
-
-                    Toast.makeText(RegistroUsuario.this, "Se ha registrado", Toast.LENGTH_SHORT).show();
+        }else{
+            AlertDialog.Builder myAlert = new AlertDialog.Builder(this);
+            myAlert.setMessage("La contraseña proporcionada y la contraseña de confirmación son diferentes");
+            myAlert.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
                 }
-                else{
-                    if (task.getException() instanceof FirebaseAuthUserCollisionException)
-                    {
-                        Toast.makeText(RegistroUsuario.this, "Ese usuario ya existe", Toast.LENGTH_SHORT).show();
-                    }else
-                    {
-                        Toast.makeText(RegistroUsuario.this, "No se pudo registrar el usuario", Toast.LENGTH_SHORT).show();
+            });
+            AlertDialog titulo = myAlert.create();
+            titulo.setTitle("Error en la contraseña");
+            titulo.show();
+        }
+    }
+
+
+    private void RegistrarUsuario() {
+            progressDialog.setMessage("Realizando Registro en línea");
+            progressDialog.show();
+
+            mAuth.createUserWithEmailAndPassword(correo, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+
+                        Toast.makeText(RegistroUsuario.this, "Se ha registrado, por favor verifique el correo de verificación", Toast.LENGTH_SHORT).show();
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        user.sendEmailVerification();
+
+                    } else {
+                        if (task.getException() instanceof FirebaseAuthUserCollisionException) {
+                            Toast.makeText(RegistroUsuario.this, "Ese usuario ya existe inicie sesión", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(RegistroUsuario.this, "No se pudo registrar el usuario o el correo no existe", Toast.LENGTH_SHORT).show();
+                        }
+
                     }
+                    progressDialog.dismiss();
 
                 }
-                progressDialog.dismiss();
-
-            }
-        });
+            });
 
     }
 
-    public void onClickSiguiente(View v)
-    {
-        RegistrarUsuario();
-    }
 
 }
 

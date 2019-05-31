@@ -22,6 +22,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -54,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void LoguearUsuario()
     {
+        final FirebaseUser user = mAuth.getCurrentUser();
+
         correo = edtCorreoExist.getText().toString().trim();
         password = edtPassExist.getText().toString().trim();
 
@@ -75,29 +78,37 @@ public class MainActivity extends AppCompatActivity {
         mAuth.signInWithEmailAndPassword(correo, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()){
-
-                    Toast.makeText(MainActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
-                    IntentSegundoActivity();
+                if (!user.isEmailVerified())
+                {
+                    Toast.makeText(MainActivity.this, "Acepte el correo de verificación para poder continuar", Toast.LENGTH_LONG).show();
                 }
-                else{
-                    if (task.getException() instanceof FirebaseAuthUserCollisionException)
-                    {
-                        Toast.makeText(MainActivity.this, "Ese usuario ya existe", Toast.LENGTH_SHORT).show();
+                else
+                {
+                    if (task.isSuccessful()){
 
-                    }else
-                    {
-                        Toast.makeText(MainActivity.this, "No se pudo registrar el usuario", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+                        IntentSegundoActivity();
                     }
+                    else {
+                        if (task.getException() instanceof FirebaseAuthUserCollisionException)
+                        {
+                            Toast.makeText(MainActivity.this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
 
+                        }
+                        else
+                        {
+                            Toast.makeText(MainActivity.this, "El usuario no existe", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
                 }
+
                 progressDialog.dismiss();
             }
         });
     }
 
     public void onClickRegistrarse(View v){
-        LoguearUsuario();
         IniciarTransicion();
         Intent intent = new Intent(this, RegistroUsuario.class);
         startActivity(intent,  ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
@@ -122,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AcercaDe.class);
         startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
     }
+
 
     // Método para poder iniciar las transiciones entre activities
     public void IniciarTransicion(){
