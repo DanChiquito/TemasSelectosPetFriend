@@ -34,19 +34,7 @@ public class RecyclerMascota extends AppCompatActivity {
 
         fabAddPet = findViewById(R.id.fabAddPet);
 
-
-        byte []fotoByteArray= ByteBuffer.allocate(4).putInt(R.drawable.catdog).array();
-
-        ArrayList<MascotaDatos> datosMascotas = new ArrayList<>();
-        datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania", fotoByteArray,"Chico"));
-        datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania", fotoByteArray,"Chico"));
-        datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania", fotoByteArray,"Chico"));
-        datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania", fotoByteArray,"Chico"));
-        datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania", fotoByteArray,"Chico"));
-        datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania", fotoByteArray,"Chico"));
-        datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania",fotoByteArray,"Chico"));
-
-        /*txtvtiempocomer=findViewById(R.id.txtvtiempocomer);
+        txtvtiempocomer=findViewById(R.id.txtvtiempocomer);
         txtvtiempobañar=findViewById(R.id.txtvtiempobañar);
         txtvfechavet=findViewById(R.id.txtvfechavet);
         txtvtiempovet=findViewById(R.id.txtvtiempovet);
@@ -54,7 +42,25 @@ public class RecyclerMascota extends AppCompatActivity {
         txtvfechavac=findViewById(R.id.txtvfechavac);
         txtvtiempovac=findViewById(R.id.txtvtiempovac);
         txtvDirecvac=findViewById(R.id.txtvDirecvac);
+
+
+        String NombreMascota=getIntent().getStringExtra("NombreMascota");
+        String HoraComerMascota=getIntent().getStringExtra("HoraComerMascota");
+        String HoraBañarMascota=getIntent().getStringExtra("HoraBañarMascota");
+        String FechaVet=getIntent().getStringExtra("FechaVet");
+        String HoraVet=getIntent().getStringExtra("HoraVet");
+        String HoraDirecVet=getIntent().getStringExtra("HoraDirecVet");
+        String FechaVac=getIntent().getStringExtra("FechaVac");
+        String HoraVac=getIntent().getStringExtra("HoraVac");
+        String HoraDirecVac=getIntent().getStringExtra("HoraDirecVac");
+
+        byte []fotoByteArray= ByteBuffer.allocate(4).putInt(R.drawable.catdog).array();
+
+
+
         ArrayList<MascotaDatos> datosMascotas = new ArrayList<>();
+        datosMascotas.add(new MascotaDatos(NombreMascota,10,"10/10/19","Pomerania", fotoByteArray,"Chico"));
+
 
 
         rcMyPets = findViewById(R.id.rcMyPets);
@@ -65,11 +71,16 @@ public class RecyclerMascota extends AppCompatActivity {
         rcMyPets.setLayoutManager(mLayoutManager);
         rcMyPets.setAdapter(mAdapter);
 
+
+
+
+
+
     }
 
     public void onClickAdd(View v)
     {
 
-    }*/
+    }
   }
 }

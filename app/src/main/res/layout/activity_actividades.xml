@@ -104,32 +104,38 @@
             android:textColor="@color/colortxtviews"
             android:textSize="18sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/edtfechavet"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:gravity="center"
             android:layout_below="@id/txtvVeterinario"
             android:layout_alignStart="@id/txtvVeterinario"
-            android:textSize="18sp"
             android:layout_alignEnd="@id/txtvVeterinario"
+            android:duplicateParentState="false"
             android:ems="10"
+            android:gravity="center"
             android:hint="dd/mm/aa"
+            android:inputType="date"
+            android:onClick="onClickListener"
             android:textColor="@color/colortext"
-            android:inputType="date" />
+            android:textSize="18sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/edthoravet"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:ems="10"
             android:layout_below="@id/edtfechavet"
-            android:layout_alignEnd="@id/edtfechavet"
             android:layout_alignStart="@id/edtfechavet"
+            android:layout_alignEnd="@id/edtfechavet"
+            android:ems="10"
+            android:enabled="true"
             android:gravity="center"
             android:hint="hh:mm"
+
+            android:inputType="time"
+            android:onClick="onClickListener"
             android:textColor="@color/colortext"
-            android:inputType="time" />
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/edtdirecvet"
@@ -142,7 +148,7 @@
             android:gravity="center"
             android:hint="Dirección"
             android:textColor="@color/colortext"
-            android:inputType="textPersonName" />
+            android:inputType="text" />
 
         <TextView
             android:id="@+id/txtvVacuna"
@@ -158,7 +164,7 @@
             android:textColor="@color/colortxtviews"
             android:textSize="18sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/edtfechavac"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
@@ -169,10 +175,11 @@
             android:layout_alignEnd="@id/txtvVeterinario"
             android:ems="10"
             android:hint="dd/mm/aa"
+            android:onClick="onClickListener"
             android:textColor="@color/colortext"
             android:inputType="date" />
 
-        <EditText
+        <TextView
             android:id="@+id/edthoravac"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
@@ -182,6 +189,7 @@
             android:layout_alignStart="@id/edtfechavet"
             android:gravity="center"
             android:hint="hh:mm"
+            android:onClick="onClickListener"
             android:textColor="@color/colortext"
             android:inputType="time" />
 
@@ -195,7 +203,7 @@
             android:layout_alignEnd="@id/edtfechavet"
             android:gravity="center"
             android:textColor="@color/colortext"
-            android:inputType="textPersonName"
+            android:inputType="text"
             android:hint="Dirección"     />
 
         <Button

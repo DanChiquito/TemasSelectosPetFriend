@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickAcercaCe(View v)
     {
         IniciarTransicion();
-        Intent intent = new Intent(this, formularioMascota.class);
+        Intent intent = new Intent(this, AcercaDe.class);
         startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
     }
 

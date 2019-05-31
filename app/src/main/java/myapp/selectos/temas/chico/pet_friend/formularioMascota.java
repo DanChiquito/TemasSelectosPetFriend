@@ -119,6 +119,7 @@ public class formularioMascota extends AppCompatActivity implements AdapterView.
         }
         if(swGrande.isChecked()|swMediano.isChecked()|swChico.isChecked())
         {
+
             try
             {
                 String nombre=edtNombre.getText().toString();
