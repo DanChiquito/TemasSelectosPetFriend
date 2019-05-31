@@ -15,11 +15,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 
 public class RegistroUsuario extends AppCompatActivity {
 
-    private static final String TAG = "" ;
     private ProgressDialog progressDialog;
     private String correo;
     private String password;
@@ -71,10 +71,30 @@ public class RegistroUsuario extends AppCompatActivity {
         mAuth.createUserWithEmailAndPassword(correo, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+
+                    Toast.makeText(RegistroUsuario.this, "Se ha registrado", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    if (task.getException() instanceof FirebaseAuthUserCollisionException)
+                    {
+                        Toast.makeText(RegistroUsuario.this, "Ese usuario ya existe", Toast.LENGTH_SHORT).show();
+                    }else
+                    {
+                        Toast.makeText(RegistroUsuario.this, "No se pudo registrar el usuario", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+                progressDialog.dismiss();
 
             }
         });
 
+    }
+
+    public void onClickSiguiente(View v)
+    {
+        RegistrarUsuario();
     }
 
 }

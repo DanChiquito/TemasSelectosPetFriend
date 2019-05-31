@@ -1,18 +1,39 @@
 package myapp.selectos.temas.chico.pet_friend;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.transition.Slide;
 import android.transition.Transition;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    private Button btnIniciarSesion;
+    private EditText edtCorreoExist;
+    private EditText edtPassExist;
+    private String correo;
+    private String password;
+
+    private ProgressDialog progressDialog;
+    private FirebaseAuth mAuth;
 
     public static final long duracionTrans = 1000;
 
@@ -21,20 +42,77 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        btnIniciarSesion = findViewById(R.id.btnIniciarSesion);
+        edtCorreoExist = findViewById(R.id.edtCorreo);
+        edtPassExist = findViewById(R.id.edtPassword);
+        progressDialog = new ProgressDialog(this);
+
+        mAuth = FirebaseAuth.getInstance();
+
 
     }
 
+    private void LoguearUsuario()
+    {
+        correo = edtCorreoExist.getText().toString().trim();
+        password = edtPassExist.getText().toString().trim();
+
+        if (TextUtils.isEmpty(correo)) {
+
+            Toast.makeText(this, "Se debe escribir un correo", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (TextUtils.isEmpty(password))
+        {
+            Toast.makeText(this, "Se debe escribir una contraseña", Toast.LENGTH_SHORT).show();
+            return;
+
+        }
+        progressDialog.setMessage("Conectando, espera unn momento");
+        progressDialog.show();
+
+        mAuth.signInWithEmailAndPassword(correo, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+
+                    Toast.makeText(MainActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+                    IntentSegundoActivity();
+                }
+                else{
+                    if (task.getException() instanceof FirebaseAuthUserCollisionException)
+                    {
+                        Toast.makeText(MainActivity.this, "Ese usuario ya existe", Toast.LENGTH_SHORT).show();
+
+                    }else
+                    {
+                        Toast.makeText(MainActivity.this, "No se pudo registrar el usuario", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+                progressDialog.dismiss();
+            }
+        });
+    }
+
     public void onClickRegistrarse(View v){
+        LoguearUsuario();
         IniciarTransicion();
         Intent intent = new Intent(this, RegistroUsuario.class);
         startActivity(intent,  ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
 
     }
 
-    public void onClickIniciarSesión(View v){
-        IniciarTransicion();
+    public void IntentSegundoActivity()
+    {
         Intent intent = new Intent(this, RecyclerMascota.class);
         startActivity(intent,  ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
+    }
+
+    public void onClickIniciarSesión(View v){
+        IniciarTransicion();
+        LoguearUsuario();
 
     }
 
@@ -54,6 +132,8 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setExitTransition(transition);
 
     }
+
+
 
 
 }
