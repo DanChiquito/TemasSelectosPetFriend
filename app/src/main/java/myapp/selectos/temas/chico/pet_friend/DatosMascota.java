@@ -44,16 +44,16 @@ public class DatosMascota extends AppCompatActivity {
         try
         {
             Bundle extras = getIntent().getExtras();
-            Bitmap bitmapFoto= null;
+            //Bitmap bitmapFoto= null;
 
             txtvNombreMascota.setText(extras.getString("NombreMascota")) ;
             txtvRaza.setText(extras.getString("Raza"));
             txtvCumple.setText(extras.getString("Cumple"));
 
-            byte[] blob = extras.getByteArray("Foto");
+            /*byte[] blob = extras.getByteArray("Foto");
             ByteArrayInputStream byteFoto = new ByteArrayInputStream(blob);
             bitmapFoto = BitmapFactory.decodeStream(byteFoto);
-            imvFoto.setImageBitmap(bitmapFoto);
+            imvFoto.setImageBitmap(bitmapFoto);*/
         }
         catch (Exception error)
         {
