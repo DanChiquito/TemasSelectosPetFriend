@@ -73,7 +73,7 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
         txtvNombre.setText(horaActual);
       //
 
-        
+
 
        // int horas_comer= Integer.parseInt(edtComer.getText().toString());
         //int horas_bañar=Integer.parseInt(edtBañar.getText().toString());
