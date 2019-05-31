@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.icu.util.Calendar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
@@ -57,6 +58,7 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
         edtdirecvac=findViewById(R.id.edtdirecvac);
         btnGuardar=findViewById(R.id.btnGuardar);
 
+
         //OBTENER FECHA Y HORA ACTUAL
 
         Date date = new Date();
@@ -80,6 +82,29 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
         String direccionVet= edtdirecvet.getText().toString();
         String direccionVac=edtdirecvac.getText().toString();
         int FechaVet[]={diavet,mesvet,añovet};
+      
+      try
+        {
+            Bundle datosMascota = getIntent().getExtras();
+            //Bitmap bitmapFoto= null;
+            //byte[] blob = extras.getByteArray("Foto");
+            //ByteArrayInputStream byteFoto = new ByteArrayInputStream(blob);
+            //bitmapFoto = BitmapFactory.decodeStream(byteFoto);
+            //imvFoto.setImageBitmap(bitmapFoto);
+
+            String nombreMascota = datosMascota.getString("NombreMascota");
+            String raza = datosMascota.getString("Raza");
+            String cumple = datosMascota.getString("Cumple");
+            int peso = datosMascota.getInt("Peso");
+            String size = datosMascota.getString("Size");
+
+            txtvNombre.setText(nombreMascota);
+
+        }
+        catch (Exception error)
+        {
+            Log.d("Error 04","Error: "+error.getMessage());
+        }
 
     }
 

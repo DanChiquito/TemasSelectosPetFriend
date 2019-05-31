@@ -46,13 +46,9 @@ public class formularioMascota extends AppCompatActivity implements AdapterView.
     Switch swChico;
     Switch swPerroGato;
     Spinner spnRazas;
-    MascotaDatos datosMascota;
     String razaSeleccionada;
     String size;
-    String[] raza;
-    Button btnTerminar;
     public static final long duracionTrans = 1000;
-    private Activity activity;
 
 
 
@@ -78,6 +74,7 @@ public class formularioMascota extends AppCompatActivity implements AdapterView.
         ArrayAdapter<CharSequence> adapterRazas = ArrayAdapter.createFromResource(this, R.array.razasPerro, android.R.layout.simple_spinner_item);
         adapterRazas.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnRazas.setAdapter(adapterRazas);
+        spnRazas.setOnItemSelectedListener(this);
 
 
     }
@@ -94,20 +91,19 @@ public class formularioMascota extends AppCompatActivity implements AdapterView.
             ArrayAdapter<CharSequence> adapterRazas = ArrayAdapter.createFromResource(this, R.array.razasGato, android.R.layout.simple_spinner_item);
             adapterRazas.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spnRazas.setAdapter(adapterRazas);
-            raza=getResources().getStringArray(R.array.razasGato);
         }
         else
         {
             ArrayAdapter<CharSequence>adapterRazas=ArrayAdapter.createFromResource(this,R.array.razasPerro,android.R.layout.simple_spinner_item);
             adapterRazas.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spnRazas.setAdapter(adapterRazas);
-            raza=getResources().getStringArray(R.array.razasPerro);
         }
 
 
     }
     public void onClickTerminar(View v)
     {
+
 
         if(swChico.isChecked())
         {
@@ -121,34 +117,53 @@ public class formularioMascota extends AppCompatActivity implements AdapterView.
         {
             size="Grande";
         }
-        try
+        if(swGrande.isChecked()|swMediano.isChecked()|swChico.isChecked())
         {
-            Intent intentDatosMascota = new Intent(this,DatosMascota.class);
-            Bitmap bitmFoto= ((BitmapDrawable) imgFotoMascota.getDrawable()).getBitmap();
-            ByteArrayOutputStream byteImagen= new ByteArrayOutputStream(20480);
-            bitmFoto.compress(Bitmap.CompressFormat.PNG,0,byteImagen);
 
-            byte[]blobMascota=byteImagen.toByteArray();
-
-            datosMascota = new MascotaDatos(edtNombre.getText().toString(),Integer.parseInt(edtPeso.getText().toString()), edtCumple.getText().toString(),razaSeleccionada,blobMascota,size);
-            if(!(datosMascota.getNombre().equals("") || datosMascota.getFechaNacimiento().equals("")))
+            try
             {
-
-                intentDatosMascota.putExtra("NombreMascota",datosMascota.getNombre());
-                intentDatosMascota.putExtra("Peso",datosMascota.getPeso());
-                intentDatosMascota.putExtra("Cumple",datosMascota.getFechaNacimiento());
-                intentDatosMascota.putExtra("Foto",datosMascota.getFoto());
-                intentDatosMascota.putExtra("Raza",datosMascota.getRaza());
-
-                startActivity(intentDatosMascota);
+                String nombre=edtNombre.getText().toString();
+                String fechaNacimiento = edtCumple.getText().toString();
+                int peso = Integer.parseInt(edtPeso.getText().toString());
 
 
+                Bitmap bitmFoto= ((BitmapDrawable) imgFotoMascota.getDrawable()).getBitmap();
+                ByteArrayOutputStream byteImagen= new ByteArrayOutputStream(20480);
+                bitmFoto.compress(Bitmap.CompressFormat.PNG,0,byteImagen);
+                byte[]blobMascota=byteImagen.toByteArray();
+
+                if(!(nombre.equals("") || fechaNacimiento.equals("")|| edtPeso.getText().toString().equals("")))
+                {
+                    //Intent intentDatosMascota = new Intent(formularioMascota.this,DatosMascota.class);
+                    Intent intentActividades = new Intent(formularioMascota.this,actividades.class);
+
+                    /*intentDatosMascota.putExtra("NombreMascota",nombre);
+                    intentDatosMascota.putExtra("Raza",razaSeleccionada);
+                    intentDatosMascota.putExtra("Cumple",fechaNacimiento);
+                    intentDatosMascota.putExtra("Peso",peso);
+                    intentDatosMascota.putExtra("Size",size);
+                    intentDatosMascota.putExtra("Foto",blobMascota);*/
+
+                    intentActividades.putExtra("NombreMascota",nombre);
+                    intentActividades.putExtra("Raza",razaSeleccionada);
+                    intentActividades.putExtra("Cumple",fechaNacimiento);
+                    intentActividades.putExtra("Peso",peso);
+                    intentActividades.putExtra("Size",size);
+                    intentActividades.putExtra("Foto",blobMascota);
+
+                    startActivity(intentActividades);
+                }
             }
-        }
 
-        catch(Exception error)
+            catch(Exception error)
+            {
+                Log.d("Error 01","Error: "+error.getMessage());
+                Toast.makeText(getApplicationContext(), "Por favor llena todos los campos", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+        else
         {
-            Log.d("Error 01","Error: "+error.getMessage());
             Toast.makeText(getApplicationContext(), "Por favor llena todos los campos", Toast.LENGTH_SHORT).show();
         }
 
@@ -168,14 +183,13 @@ public class formularioMascota extends AppCompatActivity implements AdapterView.
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        razaSeleccionada = raza[position];
-
+       razaSeleccionada = parent.getItemAtPosition(position).toString();
 
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-
+        razaSeleccionada = parent.getItemAtPosition(0).toString();
     }
     public void IniciarTransicion(){
         Transition transition;
