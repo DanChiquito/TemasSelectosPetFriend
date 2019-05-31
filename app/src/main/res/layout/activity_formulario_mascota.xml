@@ -55,7 +55,7 @@
             android:background="@drawable/custom_button"
             android:onClick="onClickTerminar"
             android:text="Terminar"
-            android:textColor="@color/backGround1"
+            android:textColor="@color/colortext"
             android:textColorHint="@color/backGround1" />
 
         <EditText
@@ -69,7 +69,7 @@
             android:gravity="center"
             android:hint="dd/mm/aa"
             android:inputType="date"
-            android:textColor="@color/backGround1"
+            android:textColor="@color/colortxtviews"
             android:textColorHint="@color/backGround1" />
 
         <TextView
@@ -81,7 +81,7 @@
             android:layout_marginTop="20dp"
             android:textColor="@color/colortext"
             android:text="@string/txt_Cumpleaños"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/txtvNombre"
@@ -92,7 +92,7 @@
             android:layout_alignStart="@id/imvFotoMascota"
             android:textColor="@color/colortext"
             android:text="@string/txt_Nombre"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/edtNombreMascota"
@@ -116,7 +116,7 @@
             android:layout_centerHorizontal="true"
             android:textColor="@color/colortext"
             android:text="@string/txt_Tamaño"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/txtvRaza"
@@ -127,7 +127,7 @@
             android:layout_marginTop="15dp"
             android:text="@string/txt_Raza"
             android:textColor="@color/colortext"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/imvFotoMascota"
@@ -157,7 +157,7 @@
             android:layout_marginTop="20dp"
             android:text="@string/txtv_Peso"
             android:textColor="@color/colortext"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/edt_Peso"
@@ -172,6 +172,7 @@
             android:inputType="textPersonName"
             android:textColor="@color/colortxtviews"
             android:textColorHint="@color/backGround1"
+            android:textColor="@color/colortxtviews"
             android:textSize="18sp" />
 
         <Switch

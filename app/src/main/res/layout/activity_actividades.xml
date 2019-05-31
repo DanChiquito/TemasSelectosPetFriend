@@ -45,6 +45,7 @@
             android:textColor="@color/colortxtviews"
             android:textSize="18sp" />
 
+
         <EditText
             android:id="@+id/edtComer"
             android:layout_width="115dp"
@@ -56,9 +57,9 @@
             android:ems="10"
             android:gravity="center"
             android:hint="Horas"
-            android:inputType="textPersonName"
+            android:inputType="numberSigned"
             android:textColor="@color/colortext"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/txtvBañar"
@@ -85,7 +86,7 @@
             android:ems="10"
             android:gravity="center"
             android:hint="Horas"
-            android:inputType="textPersonName"
+            android:inputType="numberSigned"
             android:textColor="@color/colortext"
             android:textSize="18sp" />
 
@@ -114,6 +115,7 @@
             android:layout_alignEnd="@id/txtvVeterinario"
             android:ems="10"
             android:hint="dd/mm/aa"
+            android:textColor="@color/colortext"
             android:inputType="date" />
 
         <EditText
@@ -126,21 +128,20 @@
             android:layout_alignStart="@id/edtfechavet"
             android:gravity="center"
             android:hint="hh:mm"
+            android:textColor="@color/colortext"
             android:inputType="time" />
 
         <EditText
             android:id="@+id/edtdirecvet"
             android:layout_width="wrap_content"
-            android:background="@drawable/background_edittext"
             android:layout_height="40dp"
             android:layout_below="@id/edthoravet"
             android:layout_alignStart="@id/edtfechavet"
             android:layout_alignEnd="@id/edtfechavet"
-            android:layout_marginStart="-1dp"
-            android:layout_marginEnd="1dp"
             android:ems="10"
             android:gravity="center"
             android:hint="Dirección"
+            android:textColor="@color/colortext"
             android:inputType="textPersonName" />
 
         <TextView
@@ -168,6 +169,7 @@
             android:layout_alignEnd="@id/txtvVeterinario"
             android:ems="10"
             android:hint="dd/mm/aa"
+            android:textColor="@color/colortext"
             android:inputType="date" />
 
         <EditText
@@ -180,6 +182,7 @@
             android:layout_alignStart="@id/edtfechavet"
             android:gravity="center"
             android:hint="hh:mm"
+            android:textColor="@color/colortext"
             android:inputType="time" />
 
         <EditText
@@ -191,6 +194,7 @@
             android:layout_alignStart="@id/edtfechavet"
             android:layout_alignEnd="@id/edtfechavet"
             android:gravity="center"
+            android:textColor="@color/colortext"
             android:inputType="textPersonName"
             android:hint="Dirección"     />
 
@@ -199,15 +203,17 @@
             android:layout_width="300dp"
             android:layout_height="40dp"
 
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/custom_button"
             android:layout_below="@+id/edtdirecvac"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="50dp"
+            android:background="@drawable/custom_button"
+            android:onClick="onClickGuardar"
             android:text="Guardar"
-            android:textColor="@color/backGround1"
-            android:textColorHint="@color/backGround1"
-            />
+            android:textColor="@color/colortext"
+            android:textColorHint="@color/backGround1" />
+
+
 
     </RelativeLayout>
 
