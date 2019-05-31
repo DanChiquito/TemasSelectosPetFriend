@@ -130,7 +130,7 @@ public class formularioMascota extends AppCompatActivity implements AdapterView.
 
             byte[]blobMascota=byteImagen.toByteArray();
 
-            datosMascota = new MascotaDatos(edtNombre.getText().toString(),Integer.parseInt(edtPeso.getText().toString()), edtCumple.getText().toString(),razaSeleccionada,blobMascota, size);
+            datosMascota = new MascotaDatos(edtNombre.getText().toString(),Integer.parseInt(edtPeso.getText().toString()), edtCumple.getText().toString(),razaSeleccionada,blobMascota,size);
             if(!(datosMascota.getNombre().equals("") || datosMascota.getFechaNacimiento().equals("")))
             {
 

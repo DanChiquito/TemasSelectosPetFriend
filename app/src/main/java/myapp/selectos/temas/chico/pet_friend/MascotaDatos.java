@@ -1,9 +1,6 @@
 package myapp.selectos.temas.chico.pet_friend;
 
 
-import android.graphics.Bitmap;
-
-
 public class MascotaDatos {
 
     private String Nombre;
@@ -15,12 +12,12 @@ public class MascotaDatos {
 
 
     public MascotaDatos(String nombre, int peso, String fechaNacimiento, String raza, byte[] foto, String tamaño) {
-        Nombre = nombre;
-        Peso = peso;
-        FechaNacimiento = fechaNacimiento;
-        Raza = raza;
-        Foto = foto;
-        Tamaño = tamaño;
+        setNombre(nombre);
+        setPeso(peso);
+        setFechaNacimiento(fechaNacimiento);
+        setRaza(raza);
+        setFoto(foto);
+        setTamaño(tamaño);
     }
 
     public String getNombre() {
@@ -55,11 +52,11 @@ public class MascotaDatos {
         Raza = raza;
     }
 
-    public  byte[] getFoto() {
+    public byte[] getFoto() {
         return Foto;
     }
 
-    public void setFoto( byte[] foto) {
+    public void setFoto(byte[] foto) {
         Foto = foto;
     }
 
@@ -70,8 +67,4 @@ public class MascotaDatos {
     public void setTamaño(String tamaño) {
         Tamaño = tamaño;
     }
-
-
-
-
 }
