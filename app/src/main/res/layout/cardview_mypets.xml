@@ -20,7 +20,8 @@
         <ImageView
             android:id="@+id/imvPet"
             android:layout_width="150dp"
-            android:layout_height="130dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
             tools:srcCompat="@tools:sample/avatars[3]"
             android:layout_alignParentStart="true"/>
 
@@ -30,7 +31,7 @@
             android:layout_height="30dp"
             android:layout_alignStart="@id/imvPet"
             android:layout_alignEnd="@id/imvPet"
-            android:layout_alignBottom="@+id/imvPet"
+            android:layout_below="@+id/imvPet"
             android:background="@color/colorBotonesSec"
             android:gravity="center"
             android:textColor="@color/colortxtviews"
@@ -38,16 +39,144 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/txtHoraComer"
+            android:id="@+id/txtvComer"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtNamePet"
-            android:layout_alignStart="@+id/txtNamePet"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/imvPet"
+            android:background="#BDBDBD"
+            android:gravity="center"
+            android:text="Tiempo para comer"
+            android:textColor="@color/colortxtviews"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txtvtiempocomer"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/txtvComer"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/imvPet"
+            android:background="@color/colortxtviews"
+            android:gravity="center"
+            android:textColor="#757575"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txtvBañar"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/txtvtiempocomer"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/imvPet"
+            android:background="#BDBDBD"
+            android:gravity="center"
+            android:text="Tiempo para bañarse"
+            android:textColor="@color/colortxtviews"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txtvtiempobañar"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/txtvBañar"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/imvPet"
+            android:background="@color/colortxtviews"
+            android:gravity="center"
+            android:textColor="#757575"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txtvVeterinario"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/txtvtiempobañar"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/imvPet"
+            android:background="#BDBDBD"
+            android:gravity="center"
+            android:text="Próxima consulta"
+            android:textColor="@color/colortxtviews"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txtvfechavet"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/txtvVeterinario"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/imvPet"
+            android:background="@color/colortxtviews"
+            android:gravity="center"
+            android:textColor="#757575"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txtvtiempovet"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/txtvfechavet"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/imvPet"
+            android:background="@color/colortxtviews"
+            android:gravity="center"
+            android:textColor="#757575"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txtvDirecvet"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/txtvtiempovet"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/imvPet"
+            android:background="@color/colortxtviews"
+            android:gravity="center"
+            android:textColor="#757575"
+            android:textSize="16sp" />
 
-            android:layout_marginStart="220dp"
-            android:layout_marginTop="-61dp"
-            android:text="@string/txt_hora_comer"
-            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/txtvVacuna"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/txtvDirecvet"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/imvPet"
+            android:background="#BDBDBD"
+            android:gravity="center"
+            android:text="Próxima vacuna"
+            android:textColor="@color/colortxtviews"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txtvfechavac"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/txtvVacuna"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/imvPet"
+            android:background="@color/colortxtviews"
+            android:gravity="center"
+            android:textColor="#757575"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txtvtiempovac"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/txtvfechavac"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/imvPet"
+            android:background="@color/colortxtviews"
+            android:gravity="center"
+            android:textColor="#757575"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txtvDirecvac"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/txtvtiempovac"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/imvPet"
+            android:background="@color/colortxtviews"
+            android:gravity="center"
+            android:textColor="#757575"
+            android:textSize="16sp" />
+
+
 
 
     </RelativeLayout>
