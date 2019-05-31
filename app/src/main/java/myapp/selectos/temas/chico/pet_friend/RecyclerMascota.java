@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 
 public class RecyclerMascota extends AppCompatActivity {
@@ -32,6 +33,19 @@ public class RecyclerMascota extends AppCompatActivity {
         setContentView(R.layout.activity_recycler_mascota);
 
         fabAddPet = findViewById(R.id.fabAddPet);
+
+
+        byte []fotoByteArray= ByteBuffer.allocate(4).putInt(R.drawable.catdog).array();
+
+        ArrayList<MascotaDatos> datosMascotas = new ArrayList<>();
+        datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania", fotoByteArray,"Chico"));
+        datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania", fotoByteArray,"Chico"));
+        datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania", fotoByteArray,"Chico"));
+        datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania", fotoByteArray,"Chico"));
+        datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania", fotoByteArray,"Chico"));
+        datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania", fotoByteArray,"Chico"));
+        datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania",fotoByteArray,"Chico"));
+
         txtvtiempocomer=findViewById(R.id.txtvtiempocomer);
         txtvtiempobañar=findViewById(R.id.txtvtiempobañar);
         txtvfechavet=findViewById(R.id.txtvfechavet);
@@ -42,15 +56,6 @@ public class RecyclerMascota extends AppCompatActivity {
         txtvDirecvac=findViewById(R.id.txtvDirecvac);
         ArrayList<MascotaDatos> datosMascotas = new ArrayList<>();
 
-        datosMascotas.add(new MascotaDatos("Puchy", R.drawable.catdog));
-        datosMascotas.add(new MascotaDatos("Puchy", R.drawable.catdog));
-        datosMascotas.add(new MascotaDatos("Puchy", R.drawable.catdog));
-        datosMascotas.add(new MascotaDatos("Puchy", R.drawable.catdog));
-        datosMascotas.add(new MascotaDatos("Puchy", R.drawable.catdog));
-        datosMascotas.add(new MascotaDatos("Puchy", R.drawable.catdog));
-        datosMascotas.add(new MascotaDatos("Puchy", R.drawable.catdog));
-        datosMascotas.add(new MascotaDatos("Puchy", R.drawable.catdog));
-        datosMascotas.add(new MascotaDatos("Puchy", R.drawable.catdog));
 
         rcMyPets = findViewById(R.id.rcMyPets);
         rcMyPets.setHasFixedSize(true);
