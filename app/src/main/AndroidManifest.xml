@@ -21,18 +21,25 @@
         android:theme="@style/AppTheme">
         <activity android:name=".actividades"></activity>
         <activity android:name=".PantallaInicio">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RecyclerMascota" />
-        <activity android:name=".RegistroUsuario" />
-        <activity android:name=".formularioMascota" />
-        <activity android:name=".DatosMascota" />
-        <activity android:name=".AcercaDe" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".RecyclerMascota"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RegistroUsuario"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".formularioMascota"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DatosMascota"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AcercaDe"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
