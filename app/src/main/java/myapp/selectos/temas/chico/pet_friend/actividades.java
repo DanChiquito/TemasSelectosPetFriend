@@ -3,6 +3,7 @@ package myapp.selectos.temas.chico.pet_friend;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,10 +46,34 @@ public class actividades extends AppCompatActivity {
         edtdirecvac=findViewById(R.id.edtdirecvac);
         btnGuardar=findViewById(R.id.btnGuardar);
 
-        int horas_comer= Integer.parseInt(edtComer.getText().toString());
-        int horas_bañar=Integer.parseInt(edtBañar.getText().toString());
+        //int horas_comer= Integer.parseInt(edtComer.getText().toString());
+        //int horas_bañar=Integer.parseInt(edtBañar.getText().toString());
         String direccionVet= edtdirecvet.getText().toString();
         String direccionVac=edtdirecvac.getText().toString();
+
+        try
+        {
+            Bundle datosMascota = getIntent().getExtras();
+            //Bitmap bitmapFoto= null;
+            //byte[] blob = extras.getByteArray("Foto");
+            //ByteArrayInputStream byteFoto = new ByteArrayInputStream(blob);
+            //bitmapFoto = BitmapFactory.decodeStream(byteFoto);
+            //imvFoto.setImageBitmap(bitmapFoto);
+
+            String nombreMascota = datosMascota.getString("NombreMascota");
+            String raza = datosMascota.getString("Raza");
+            String cumple = datosMascota.getString("Cumple");
+            int peso = datosMascota.getInt("Peso");
+            String size = datosMascota.getString("Size");
+
+            txtvNombre.setText(nombreMascota);
+
+        }
+        catch (Exception error)
+        {
+            Log.d("Error 04","Error: "+error.getMessage());
+        }
+
     }
 
     public void onClickGuardar(View v)

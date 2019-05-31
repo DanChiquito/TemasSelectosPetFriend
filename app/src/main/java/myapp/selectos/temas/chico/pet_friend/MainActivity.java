@@ -125,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
         IniciarTransicion();
         LoguearUsuario();
 
+
     }
 
     public void onClickAcercaCe(View v)

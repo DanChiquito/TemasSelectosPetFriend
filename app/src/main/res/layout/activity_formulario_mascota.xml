@@ -172,7 +172,6 @@
             android:inputType="textPersonName"
             android:textColor="@color/colortxtviews"
             android:textColorHint="@color/backGround1"
-            android:textColor="@color/colortxtviews"
             android:textSize="18sp" />
 
         <Switch

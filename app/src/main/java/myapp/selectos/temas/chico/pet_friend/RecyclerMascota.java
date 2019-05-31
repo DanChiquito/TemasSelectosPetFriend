@@ -46,7 +46,7 @@ public class RecyclerMascota extends AppCompatActivity {
         datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania", fotoByteArray,"Chico"));
         datosMascotas.add(new MascotaDatos("Puchy",10,"10/10/19","Pomerania",fotoByteArray,"Chico"));
 
-        txtvtiempocomer=findViewById(R.id.txtvtiempocomer);
+        /*txtvtiempocomer=findViewById(R.id.txtvtiempocomer);
         txtvtiempobañar=findViewById(R.id.txtvtiempobañar);
         txtvfechavet=findViewById(R.id.txtvfechavet);
         txtvtiempovet=findViewById(R.id.txtvtiempovet);
@@ -70,5 +70,6 @@ public class RecyclerMascota extends AppCompatActivity {
     public void onClickAdd(View v)
     {
 
-    }
+    }*/
+  }
 }
