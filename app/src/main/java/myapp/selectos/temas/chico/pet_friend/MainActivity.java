@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         correo = edtCorreoExist.getText().toString().trim();
         password = edtPassExist.getText().toString().trim();
 
+        //Verificando que no haya EditText vacios
         if (TextUtils.isEmpty(correo)) {
 
             Toast.makeText(this, "Se debe escribir un correo", Toast.LENGTH_LONG).show();
@@ -72,9 +73,12 @@ public class MainActivity extends AppCompatActivity {
             return;
 
         }
+        //mandando al usuario un mensaje de carga de que se esta registrando  o esta iniciando sesión
         progressDialog.setMessage("Conectando, espera unn momento");
         progressDialog.show();
 
+
+        //Verificacion del usuario si ya ha aceptado el correo electrónico
         mAuth.signInWithEmailAndPassword(correo, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
