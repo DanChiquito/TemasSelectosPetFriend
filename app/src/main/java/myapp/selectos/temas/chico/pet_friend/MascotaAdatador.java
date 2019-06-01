@@ -26,11 +26,28 @@ public class MascotaAdatador extends RecyclerView.Adapter<MascotaAdatador.Mascot
     {
         public ImageView imvPet;
         public TextView txtNaPet;
+        public TextView txtvtiempocomer;
+        public TextView txtvtiempobañar;
+        public TextView txtvfechavet;
+        public TextView txtvtiempovet;
+        public TextView txtvDirecvet;
+        public TextView txtvfechavac;
+        public TextView txtvtiempovac;
+        public TextView txtvDirecvac;
 
         public MascotaViewHolder(@NonNull View itemView) {
             super(itemView);
             imvPet = itemView.findViewById(R.id.imvPet);
             txtNaPet = itemView.findViewById(R.id.txtNamePet);
+
+            txtvtiempocomer= itemView.findViewById(R.id.txtvtiempocomer);
+            txtvtiempobañar= itemView.findViewById(R.id.txtvtiempobañar);
+            txtvfechavet= itemView.findViewById(R.id.txtvfechavet);
+            txtvtiempovet= itemView.findViewById(R.id.txtvtiempovet);
+            txtvDirecvet= itemView.findViewById(R.id.txtvDirecvet);
+            txtvfechavac= itemView.findViewById(R.id.txtvfechavac);
+            txtvtiempovac= itemView.findViewById(R.id.txtvtiempovac);
+            txtvDirecvac= itemView.findViewById(R.id.txtvDirecvac);
         }
     }
 
@@ -48,10 +65,17 @@ public class MascotaAdatador extends RecyclerView.Adapter<MascotaAdatador.Mascot
     @Override
     public void onBindViewHolder(@NonNull MascotaViewHolder mascotaViewHolder, int i) {
 
+        //ASOCIANDO ELEMENTOS DE MI CARDVIEW CON MI IMFORMACIÓN
         MascotaDatos currentItem = mascotaDatos.get(i);
 
         mascotaViewHolder.imvPet.setImageResource(R.drawable.catdog);
         mascotaViewHolder.txtNaPet.setText(currentItem.getNombre());
+        mascotaViewHolder.txtvDirecvac.setText(currentItem.getDirecVac());
+        mascotaViewHolder.txtvDirecvet.setText(currentItem.getDirecVet());
+        mascotaViewHolder.txtvfechavac.setText(currentItem.getFechaVac());
+        mascotaViewHolder.txtvfechavet.setText(currentItem.getFechaVet());
+        mascotaViewHolder.txtvtiempobañar.setText(currentItem.getHoraBathing());
+        mascotaViewHolder.txtvtiempocomer.setText(currentItem.getHoraComer());
     }
 
     @Override
