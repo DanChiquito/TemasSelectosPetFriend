@@ -19,11 +19,9 @@
         android:roundIcon="@mipmap/icono"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".actividades">
-            android:screenOrientation="portrait">
-        </activity>
+        <activity android:name=".actividades"></activity>
         <activity android:name=".PantallaInicio">
-            android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

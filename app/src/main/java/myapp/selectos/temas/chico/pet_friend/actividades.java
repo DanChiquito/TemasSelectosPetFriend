@@ -8,7 +8,6 @@ import android.graphics.Bitmap;
 import android.icu.util.Calendar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +17,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -27,8 +25,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class actividades extends AppCompatActivity implements View.OnClickListener {
-
-    //DECLARACIÓN DE VARIABLES
 
     private ImageView imvFotoMascota;
     private TextView txtvNombre;
@@ -49,7 +45,9 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
     private  Bitmap bitmap;
 
     int diavet,mesvet,añovet,horavet,minutosvet,diavac,mesvac,añovac,horavac,minutosvac;
-
+    private PendingIntent pendingIntent;
+    private final static String CHANNEL_ID="NOTIFICACIÓN";
+    private final static int NOTIFICACION_ID=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +66,7 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
         edtdirecvac=findViewById(R.id.edtdirecvac);
         btnGuardar=findViewById(R.id.btnGuardar);
 
-        //OBTENIENDO DATOS DE formularioMascota para pasarlos al cardview
+        //OBTENIENDO DATOS DE formularioMascota para pasarlos a al otro cardview
 
         Bundle bundle = getIntent().getExtras();
 
@@ -81,7 +79,9 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
         bitmap = (Bitmap) bundle.getParcelable("Foto");
 
         imvFotoMascota.setImageBitmap(bitmap);
-        //
+
+
+
 
         //OBTENER FECHA Y HORA ACTUAL
 
@@ -97,9 +97,15 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
         SimpleDateFormat minutosAct=new SimpleDateFormat("mm");
         String minutosActual= minutosAct.format(date);
         txtvNombre.setText(horaActual);
-        //
+      //
 
-        //CONTROL DE EXCEPPCIÓN
+
+
+       //int horas_comer= Integer.parseInt(edtComer.getText().toString());
+        //int horas_bañar=Integer.parseInt(edtBañar.getText().toString());
+        String direccionVet= edtdirecvet.getText().toString();
+        String direccionVac=edtdirecvac.getText().toString();
+        int FechaVet[]={diavet,mesvet,añovet};
 
         try
         {
@@ -109,6 +115,14 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
             String cumple = datosMascota.getString("Cumple");
             int peso = datosMascota.getInt("Peso");
             String size = datosMascota.getString("Size");
+
+            //Bitmap bitmapFoto= null;
+            //byte[] blob = extras.getByteArray("Foto");
+            //ByteArrayInputStream byteFoto = new ByteArrayInputStream(blob);
+            //bitmapFoto = BitmapFactory.decodeStream(byteFoto);
+            //imvFoto.setImageBitmap(bitmapFoto);
+
+
             txtvNombre.setText(nombreMascota);
 
         }
@@ -116,10 +130,7 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
         {
             Log.d("Error 04","Error: "+error.getMessage());
         }
-        //
     }
-
-    //OnClick PARA SELECCIONAR FECHA Y HORA CON PickerDialog
 
     public void onClickListener(View v)
     {
@@ -187,24 +198,8 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
         }
     }
 
-    //
-
-    //OnClick PARA GUARDAR Y PASAR DATOS A CardView
-
     public void onClickGuardar(View v)
     {
-        if (TextUtils.isEmpty(edtComer.getText().toString()))
-        {
-            Toast.makeText(this, "Tienes que alimentar a tu mascota ¿no lo crees?", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        if (TextUtils.isEmpty(edtBañar.getText().toString()))
-        {
-            Toast.makeText(this, "Deberias darle una ducha de vez en cuando ¿no?", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        
         Intent intent=new Intent(this,RecyclerMascota.class);
         intent.putExtra("NombreMascota",txtvNombre.getText().toString());
         intent.putExtra("HoraComerMascota",edtComer.getText().toString());

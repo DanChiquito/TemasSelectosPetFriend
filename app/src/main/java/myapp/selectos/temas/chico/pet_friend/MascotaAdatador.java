@@ -24,7 +24,6 @@ public class MascotaAdatador extends RecyclerView.Adapter<MascotaAdatador.Mascot
 
     public static class MascotaViewHolder extends RecyclerView.ViewHolder
     {
-        //Declarando los elementos de mi cardview
         public ImageView imvPet;
         public TextView txtNaPet;
         public TextView txtvtiempocomer;
