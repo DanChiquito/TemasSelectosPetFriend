@@ -57,7 +57,7 @@ public class RecyclerMascota extends AppCompatActivity {
         //OBTENIENDO DATOS DE OTROS ACTIVITIES PARA ASOCIARLOS AL OBJETO MascotaDatos
 
         Bundle bundle = getIntent().getExtras();
-
+        //CONTROL DE EXCEPCIÖN
         try
         {
             nombreMascota= bundle.getString("NombreMascota");
