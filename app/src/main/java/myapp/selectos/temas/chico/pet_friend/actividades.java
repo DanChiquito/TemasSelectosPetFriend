@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.icu.util.Calendar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -115,14 +117,6 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
             String cumple = datosMascota.getString("Cumple");
             int peso = datosMascota.getInt("Peso");
             String size = datosMascota.getString("Size");
-
-            //Bitmap bitmapFoto= null;
-            //byte[] blob = extras.getByteArray("Foto");
-            //ByteArrayInputStream byteFoto = new ByteArrayInputStream(blob);
-            //bitmapFoto = BitmapFactory.decodeStream(byteFoto);
-            //imvFoto.setImageBitmap(bitmapFoto);
-
-
             txtvNombre.setText(nombreMascota);
 
         }
@@ -200,6 +194,18 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
 
     public void onClickGuardar(View v)
     {
+        if (TextUtils.isEmpty(edtComer.getText().toString()))
+        {
+            Toast.makeText(this, "Tienes que alimentar a tu mascota ¿no lo crees?", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (TextUtils.isEmpty(edtBañar.getText().toString()))
+        {
+            Toast.makeText(this, "Deberias darle una ducha de vez en cuando ¿no?", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        
         Intent intent=new Intent(this,RecyclerMascota.class);
         intent.putExtra("NombreMascota",txtvNombre.getText().toString());
         intent.putExtra("HoraComerMascota",edtComer.getText().toString());

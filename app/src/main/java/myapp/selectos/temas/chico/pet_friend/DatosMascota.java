@@ -23,7 +23,6 @@ import java.io.ByteArrayInputStream;
 
 public class DatosMascota extends AppCompatActivity {
 
-    ImageButton imbEditar;
     ImageView imvFoto;
     TextView txtvNombreMascota;
     TextView txtvCumple;
@@ -44,16 +43,10 @@ public class DatosMascota extends AppCompatActivity {
         try
         {
             Bundle extras = getIntent().getExtras();
-            //Bitmap bitmapFoto= null;
-
             txtvNombreMascota.setText(extras.getString("NombreMascota")) ;
             txtvRaza.setText(extras.getString("Raza"));
             txtvCumple.setText(extras.getString("Cumple"));
 
-            /*byte[] blob = extras.getByteArray("Foto");
-            ByteArrayInputStream byteFoto = new ByteArrayInputStream(blob);
-            bitmapFoto = BitmapFactory.decodeStream(byteFoto);
-            imvFoto.setImageBitmap(bitmapFoto);*/
         }
         catch (Exception error)
         {
@@ -69,6 +62,8 @@ public class DatosMascota extends AppCompatActivity {
         startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
         finish();
     }
+
+    //CODIGO NECESESARIO PARA LAS TRANSICIONES
     public void IniciarTransicion(){
         Transition transition;
         transition = new Slide(Gravity.START);

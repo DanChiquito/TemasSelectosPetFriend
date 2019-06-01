@@ -100,6 +100,7 @@ public class RegistroUsuario extends AppCompatActivity {
     }
 
 
+    //Realizando el login a la base de datos de firebase y mandando correo de verificaión
     private void RegistrarUsuario() {
             progressDialog.setMessage("Realizando Registro en línea");
             progressDialog.show();
