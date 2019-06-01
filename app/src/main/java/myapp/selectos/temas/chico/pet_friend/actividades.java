@@ -4,7 +4,6 @@ import android.app.DatePickerDialog;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.icu.util.Calendar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,24 +25,17 @@ import java.util.Date;
 
 public class actividades extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView imvFotoMascota;
-    private TextView txtvNombre;
-    private EditText edtComer;
-    private EditText edtBañar;
-    private TextView edtfechavet;
-    private TextView edthoravet;
-    private EditText edtdirecvet;
-    private TextView edtfechavac;
-    private TextView edthoravac;
-    private EditText edtdirecvac;
-    private Button btnGuardar;
-    private String nombreMascota;
-    private String razaSel;
-    private String birthday;
-    private String size;
-    private int peso;
-    private  Bitmap bitmap;
-
+    ImageView imvFotoMascota;
+    TextView txtvNombre;
+    EditText edtComer;
+    EditText edtBañar;
+    TextView edtfechavet;
+    TextView edthoravet;
+    EditText edtdirecvet;
+    TextView edtfechavac;
+    TextView edthoravac;
+    EditText edtdirecvac;
+    Button btnGuardar;
     int diavet,mesvet,añovet,horavet,minutosvet,diavac,mesvac,añovac,horavac,minutosvac;
     private PendingIntent pendingIntent;
     private final static String CHANNEL_ID="NOTIFICACIÓN";
@@ -66,22 +58,6 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
         edtdirecvac=findViewById(R.id.edtdirecvac);
         btnGuardar=findViewById(R.id.btnGuardar);
 
-        //OBTENIENDO DATOS DE formularioMascota para pasarlos a al otro cardview
-
-        Bundle bundle = getIntent().getExtras();
-
-        nombreMascota = bundle.getString("NombreMascota");
-        size = bundle.getString("Size");
-        birthday = bundle.getString("Cumple");
-        razaSel = bundle.getString("Raza");
-        peso = bundle.getInt("Peso");
-
-        bitmap = (Bitmap) bundle.getParcelable("Foto");
-
-        imvFotoMascota.setImageBitmap(bitmap);
-
-
-
 
         //OBTENER FECHA Y HORA ACTUAL
 
@@ -101,27 +77,26 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
 
 
 
-       //int horas_comer= Integer.parseInt(edtComer.getText().toString());
+       // int horas_comer= Integer.parseInt(edtComer.getText().toString());
         //int horas_bañar=Integer.parseInt(edtBañar.getText().toString());
         String direccionVet= edtdirecvet.getText().toString();
         String direccionVac=edtdirecvac.getText().toString();
         int FechaVet[]={diavet,mesvet,añovet};
-
-        try
+      
+      try
         {
             Bundle datosMascota = getIntent().getExtras();
-            String nombreMascota = datosMascota.getString("NombreMascota");
-            String raza = datosMascota.getString("Raza");
-            String cumple = datosMascota.getString("Cumple");
-            int peso = datosMascota.getInt("Peso");
-            String size = datosMascota.getString("Size");
-
             //Bitmap bitmapFoto= null;
             //byte[] blob = extras.getByteArray("Foto");
             //ByteArrayInputStream byteFoto = new ByteArrayInputStream(blob);
             //bitmapFoto = BitmapFactory.decodeStream(byteFoto);
             //imvFoto.setImageBitmap(bitmapFoto);
 
+            String nombreMascota = datosMascota.getString("NombreMascota");
+            String raza = datosMascota.getString("Raza");
+            String cumple = datosMascota.getString("Cumple");
+            int peso = datosMascota.getInt("Peso");
+            String size = datosMascota.getString("Size");
 
             txtvNombre.setText(nombreMascota);
 
@@ -130,6 +105,7 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
         {
             Log.d("Error 04","Error: "+error.getMessage());
         }
+
     }
 
     public void onClickListener(View v)
@@ -210,22 +186,6 @@ public class actividades extends AppCompatActivity implements View.OnClickListen
         intent.putExtra("FechaVac",edtfechavac.getText().toString());
         intent.putExtra("HoraVac",edthoravac.getText().toString());
         intent.putExtra("HoraDirecVac",edtdirecvac.getText().toString());
-
-        intent.putExtra("Size",size);
-        intent.putExtra("Birthday",birthday);
-        intent.putExtra("Raza",razaSel);
-        intent.putExtra("Peso",peso);
-
-
-
-        intent.putExtra("DiaVac",diavac);
-        intent.putExtra("MesVac",mesvac);
-        intent.putExtra("YearVac",añovac);
-        intent.putExtra("DiaVet",diavet);
-        intent.putExtra("MesVet",mesvet);
-        intent.putExtra("YearVet",añovet);
-
-
         startActivity(intent);
     }
 

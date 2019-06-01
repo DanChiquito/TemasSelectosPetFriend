@@ -134,8 +134,16 @@ public class formularioMascota extends AppCompatActivity implements AdapterView.
 
                 if(!(nombre.equals("") || fechaNacimiento.equals("")|| edtPeso.getText().toString().equals("")))
                 {
-
+                    //Intent intentDatosMascota = new Intent(formularioMascota.this,DatosMascota.class);
                     Intent intentActividades = new Intent(formularioMascota.this,actividades.class);
+
+                    /*intentDatosMascota.putExtra("NombreMascota",nombre);
+                    intentDatosMascota.putExtra("Raza",razaSeleccionada);
+                    intentDatosMascota.putExtra("Cumple",fechaNacimiento);
+                    intentDatosMascota.putExtra("Peso",peso);
+                    intentDatosMascota.putExtra("Size",size);
+                    intentDatosMascota.putExtra("Foto",blobMascota);*/
+
                     intentActividades.putExtra("NombreMascota",nombre);
                     intentActividades.putExtra("Raza",razaSeleccionada);
                     intentActividades.putExtra("Cumple",fechaNacimiento);
@@ -143,9 +151,7 @@ public class formularioMascota extends AppCompatActivity implements AdapterView.
                     intentActividades.putExtra("Size",size);
                     intentActividades.putExtra("Foto",blobMascota);
 
-
                     startActivity(intentActividades);
-
                 }
             }
 
