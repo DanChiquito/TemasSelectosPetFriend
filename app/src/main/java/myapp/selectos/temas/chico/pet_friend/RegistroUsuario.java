@@ -3,9 +3,11 @@ package myapp.selectos.temas.chico.pet_friend;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -79,6 +81,8 @@ public class RegistroUsuario extends AppCompatActivity {
         if (passwordConf.equals(password))
         {
             RegistrarUsuario();
+            Intent intentRecycler = new Intent(this, RecyclerMascota.class);
+            startActivity(intentRecycler);
 
         }else{
             AlertDialog.Builder myAlert = new AlertDialog.Builder(this);
