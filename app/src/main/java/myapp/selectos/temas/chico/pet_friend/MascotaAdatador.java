@@ -16,6 +16,7 @@ public class MascotaAdatador extends RecyclerView.Adapter<MascotaAdatador.Mascot
 
     private ArrayList<MascotaDatos> mascotaDatos;
 
+    
     public MascotaAdatador(ArrayList<MascotaDatos> mascotaDatos)
     {
         this.mascotaDatos = mascotaDatos;
